@@ -4,7 +4,6 @@ export default function DetailsCard() {
   return (
     <div className="flex justify-center w-full p-4">
       <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6">
-        {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none text-blue-900">
             My Details
@@ -15,7 +14,6 @@ export default function DetailsCard() {
           </button>
         </div>
         <hr className="my-4 h-[1px] border-t-0 bg-gray-400 w-full" />
-        {/* Email Section */}
         <div className="space-y-4">
           <div className="flex items-start gap-4">
             <Mail className="w-5 h-5 mt-1" fill="red" color="white" />
@@ -25,7 +23,6 @@ export default function DetailsCard() {
             </div>
           </div>
           <hr className="my-4 h-[1px] border-t-0 bg-gray-400 w-full" />
-          {/* Tax Practitioner Section */}
           <div className="flex items-center gap-4 pt-2">
             <Users className="w-5 h-5" color="red" />
             <span className="text-sm text-gray-500">
@@ -33,7 +30,6 @@ export default function DetailsCard() {
             </span>
           </div>
           <hr className="my-4 h-[1px] border-t-0 bg-gray-400 w-full" />
-          {/* Phone Section */}
           <div className="flex items-start gap-4 pt-2">
             <Phone className="w-5 h-5 mt-1" fill="red" color="white" />
             <div className="flex flex-col">
@@ -42,11 +38,9 @@ export default function DetailsCard() {
             </div>
           </div>
           <hr className="my-4 h-[1px] border-t-0 bg-gray-400 w-full" />
-          {/* Address Section */}
           <div className="flex items-start gap-4 pt-2">
             <MapPin className="w-5 h-5 mt-1" fill="red" color="white" />
             <div className="flex flex-col space-y-4 w-full">
-              {/* Postal Address */}
               <div className="flex flex-col">
                 <div className="space-y-1">
                   <span className="block">Test</span>
@@ -59,7 +53,6 @@ export default function DetailsCard() {
                 </div>
               </div>
               <hr className="my-4 h-[1px] border-t-0 bg-gray-400 w-full" />
-              {/* Physical Address */}
               <div className="flex flex-col">
                 <div className="space-y-1">
                   <span className="block">Test</span>
