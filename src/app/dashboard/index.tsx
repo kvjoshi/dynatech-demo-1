@@ -1,3 +1,5 @@
+import Membership from "./components/membership";
+
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  return <Membership />;
 }
