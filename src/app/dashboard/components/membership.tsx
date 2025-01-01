@@ -16,7 +16,7 @@ export default function Membership() {
           </div>
         </div>
         <div className="bg-gray-100 p-4 rounded-lg shadow-md mb-4 border border-pink-700">
-          <p className="text-xl text-center font-bold text-pink-700">
+          <p className="text-md text-center font-bold text-pink-700">
             REQUEST CONFIRMATION OF YOUR MEMBERSHIP
           </p>
         </div>
