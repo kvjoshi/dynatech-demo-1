@@ -69,7 +69,7 @@ export default function RecentQueries() {
         <div className="hidden sm:block overflow-x-auto">
           <table className="min-w-full text-sm">
             <thead>
-              <tr className="text-left text-[#004990]">
+              <tr className="text-left text-[#000]">
                 <th className="p-2">CASE NUMBER</th>
                 <th className="p-2">CATEGORY</th>
                 <th className="p-2">STATUS</th>
@@ -104,27 +104,25 @@ export default function RecentQueries() {
               className="border border-gray-300 rounded-lg p-4 mb-4 bg-white shadow-md"
             >
               <div className="mb-2">
-                <span className="text-[#004990] font-semibold">
-                  CASE NUMBER:{" "}
-                </span>
+                <span className="text-[#000] font-semibold">CASE NUMBER: </span>
                 <span>{query.caseNumber}</span>
               </div>
               <div className="mb-2">
-                <span className="text-[#004990] font-semibold">CATEGORY: </span>
+                <span className="text-[#000] font-semibold">CATEGORY: </span>
                 <span>{query.category}</span>
               </div>
               <div className="mb-2">
-                <span className="text-[#004990] font-semibold">STATUS: </span>
+                <span className="text-[#000] font-semibold">STATUS: </span>
                 <span>{query.status}</span>
               </div>
               <div className="mb-2">
-                <span className="text-[#004990] font-semibold">
+                <span className="text-[#000] font-semibold">
                   CREATED DATE:{" "}
                 </span>
                 <span>{query.createdDate}</span>
               </div>
               <div>
-                <span className="text-[#004990] font-semibold">
+                <span className="text-[#000] font-semibold">
                   RESOLVED DATE:{" "}
                 </span>
                 <span>{query.resolvedDate}</span>
