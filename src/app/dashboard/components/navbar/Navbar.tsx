@@ -3,7 +3,7 @@ import { CircleUserRound, HomeIcon, LogOut } from "lucide-react";
 export default function Navbar() {
   return (
     <div className="flex items-center justify-between bg-[#002f6c] h-12 px-4 rounder-br-full rounded-bl-full">
-      <div className="flex items-center bg-[#E64000] h-full px-4 rounded-bl-3xl rounded-br-3xl text-white mr-2">
+      <div className="flex items-center bg-[#E64000] h-full px-4 rounded-bl-full rounded-br-full text-white mr-2">
         <HomeIcon />
         <span className="text-white font-semibold text-sm">Dashboard</span>
       </div>
