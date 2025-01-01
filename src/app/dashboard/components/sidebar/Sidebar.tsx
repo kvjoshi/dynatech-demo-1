@@ -19,9 +19,9 @@ const Sidebar = () => {
   return (
     <div>
       <aside
-        id="default-sidebar"
         className="fixed top-0 left-0 w-80 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-[#004990] overflow-y-auto"
-        aria-label="Sidebar">
+        aria-label="Sidebar"
+      >
         <div className="flex flex-col h-full">
           {/* Logo */}
           <div className="p-4">

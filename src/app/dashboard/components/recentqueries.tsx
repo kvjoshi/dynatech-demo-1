@@ -31,7 +31,7 @@ export default function RecentQueries() {
   ];
 
   return (
-    <div className="rounded-lg bg-white p-6 shadow-lg w-full max-w-6xl mx-auto mt-4">
+    <div className="rounded-lg bg-white p-6 shadow-lg w-full">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-[#004990] font-bold text-xl md:text-2xl">

@@ -2,7 +2,7 @@ import { Download, Users } from "lucide-react";
 
 export default function Membership() {
   return (
-    <div className="rounded-lg bg-white p-4 shadow-lg w-full sm:w-auto mx-auto mt-4">
+    <div className="rounded-lg bg-white p-4 shadow-lg w-full">
       <h1 className="text-[#004990] font-bold text-2xl hidden md:block">
         Membership
       </h1>
