@@ -20,7 +20,7 @@ const Sidebar = () => {
     <div>
       <aside
         id="default-sidebar"
-        className="fixed top-0 left-0 w-80 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-[#004990]"
+        className="fixed top-0 left-0 w-80 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-[#004990] overflow-y-auto"
         aria-label="Sidebar">
         <div className="flex flex-col h-full">
           {/* Logo */}
@@ -29,7 +29,7 @@ const Sidebar = () => {
           </div>
 
           {/* User Profile */}
-          <div className="px-4 py-6 text-white ">
+          <div className=" text-white ">
             <div className="flex flex-col items-center mb-4 justify-center">
               <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mb-3">
                 <User
@@ -84,52 +84,52 @@ const Sidebar = () => {
             </div>
 
             {/* Navigation Menu */}
-            <div className="mt-6 grid grid-cols-2 bg-[#F2FBFE]  gap-5 p-6">
-              <div className="flex flex-col items-center justify-center text-center bg-[#EA1946] rounded-tl-full rounded-bl-full rounded-tr-full p-6">
-                <HomeIcon color="white" />
+            <div className="grid grid-cols-2 bg-[#F2FBFE]  gap-1  rounded-tr-3xl p-4">
+              <div className="flex flex-col items-center justify-center text-center bg-[#EA1946] rounded-tl-full rounded-bl-full rounded-tr-full p-8">
+                <HomeIcon color="white" size={30} />
                 <span className="white">Dashboard</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <TableOfContents color="#004990" />
+                <TableOfContents color="#004990" size={30} />
                 <span className="text-[#004990]">Application</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <div className="bg-[#004990] rounded-full w-6 h-6 flex items-center justify-center mb-3">
+                <div className="bg-[#004990] rounded-full w-8 h-8 flex items-center justify-center mb-3">
                   <User
                     fill="white"
                     color="white"
                     strokeWidth={0.5}
-                    size={40}
+                    size={50}
                   />
                 </div>
                 <span className="text-[#004990]">Profile</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <MessageSquareMore color="white" fill="#004990" />
+                <MessageSquareMore color="white" fill="#004990" size={30} />
                 <span className="text-[#004990]">Queries</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <MessageSquareText color="white" fill="#004990" />
+                <MessageSquareText color="white" fill="#004990" size={30} />
                 <span className="text-[#004990]">Membership Compliance</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <Shield color="white" fill="#004990" />
+                <Shield color="white" fill="#004990" size={30} />
                 <span className="text-[#004990]">Complaint</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <CalendarCheck color="white" fill="#004990" />
+                <CalendarCheck color="white" fill="#004990" size={30} />
                 <span className="text-[#004990]">Upcoming Events</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <ClipboardList color="white" fill="#004990" />
+                <ClipboardList color="white" fill="#004990" size={30} />
                 <span className="text-[#004990]">Exam</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <History color="white" fill="#004990" />
+                <History color="white" fill="#004990" size={30} />
                 <span className="text-[#004990]">Exam</span>
               </div>
               <div className="flex flex-col items-center justify-center text-center hover:bg-gray-200 hover:rounded-tl-full hover:rounded-bl-full hover:rounded-tr-full p-6 ">
-                <LogOut color="#004990" />
+                <LogOut color="#004990" size={30} />
                 <span className="text-[#004990]">Logout</span>
               </div>
             </div>
