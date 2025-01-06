@@ -388,12 +388,12 @@
               </svg>
             </a>
           </div>
-          <h6>
-            Which account certifications do you hold in addition to being a
-            Chartered accountant?
-          </h6>
 
           <div class="main-wrapper">
+            <h6 class="text-start mb-4 pt-2">
+              Which account certifications do you hold in addition to being a
+              Chartered accountant?
+            </h6>
             <div class="progress-wrapper">
               <input
                 type="radio"
@@ -528,14 +528,23 @@
         const progressContainers = document.querySelectorAll(
           ".progress-container"
         );
-
         progressContainers.forEach((container) => {
           const progressFill = container.querySelector(".progress-fill");
           const progressPercent = container.querySelector(".progress-percent");
-
           // Get the percentage value from the span
           const percentText = progressPercent.textContent;
-          const value = parseInt(percentText, 10);
+          const value = parseInt(percentText, 8);
+          // Get the background color of the fill
+          const fillElement = container.querySelector(".progress-fill");
+          const fillColor =
+            window.getComputedStyle(fillElement).backgroundColor;
+          // Convert rgba to rgb for border
+          const rgbColor = fillColor.replace(
+            /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/,
+            (_, r, g, b) => `rgb(${r}, ${g}, ${b})`
+          );
+          // Set the border color and width to match the fill
+          container.style.border = `1px solid ${rgbColor}`; // You can change 2px to 1px if preferred
 
           if (value > 0) {
             progressFill.style.width = `${value}%`;
@@ -547,10 +556,8 @@
         });
       }
 
-      // Initial update
+      // Rest of your JavaScript remains the same
       document.addEventListener("DOMContentLoaded", updateProgressBars);
-
-      // Watch for changes in progress-percent spans
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (

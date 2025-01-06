@@ -588,7 +588,11 @@ body {
 /* Poll Card styling */
 
 .main-wrapper {
-  background: #000;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  padding: 0.5rem;
+  margin: 1rem 2rem;
 }
 
 .progress-wrapper {
@@ -597,7 +601,6 @@ body {
   gap: 10px;
   margin-bottom: 0.5rem;
   background-color: #fff;
-  border: 1px solid red;
 }
 
 .radio-input {
@@ -607,8 +610,8 @@ body {
 .progress-container {
   flex-grow: 1;
   position: relative;
-  height: 40px;
-  border: 2px solid #ddd;
+  height: 30px;
+  border: 2px solid;
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
@@ -656,4 +659,34 @@ body {
 }
 .fill-cia {
   background-color: rgba(220, 53, 69, 0.3);
+}
+
+@media (max-width: 768px) {
+  .main-wrapper {
+    margin: 1rem 0.5rem;
+    padding: 0.25rem;
+  }
+
+  .progress-text {
+    font-size: 14px;
+  }
+
+  .progress-percent {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .text-container {
+    padding: 0 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-text {
+    font-size: 12px;
+  }
+
+  .progress-percent {
+    padding: 10px;
+  }
 }
