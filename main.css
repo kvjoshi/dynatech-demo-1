@@ -93,7 +93,7 @@ body {
   grid-row: 11 / span 4;
 }
 
-/* Events style start*/
+/* News & Article style start*/
 .carousel-container {
   width: 100%;
   margin: 0 auto;
@@ -127,7 +127,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
   border: none;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   border: 1px solid black;
   border-radius: 50%;
 }
@@ -140,13 +140,40 @@ body {
   right: 10px;
 }
 
+.carousel-button-overlay {
+  height: 100%;
+  width: 1rem;
+  z-index: 1;
+}
+
+.prev-overlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 3rem;
+  height: 100%;
+  background-color: var(--primary);
+  z-index: 1;
+}
+
+.next-overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 2rem;
+  height: 100%;
+  /* background-color: red; */
+  background-color: var(--primary);
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
   .carousel-slide {
     min-width: 100%;
   }
 }
 
-/* Events style end */
+/* News & Article style end */
 
 @media (max-width: 768px) {
   .grid {
