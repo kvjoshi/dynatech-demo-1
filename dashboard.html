@@ -232,7 +232,102 @@
         </div>
       </div>
       <!-- Courses section -->
-      <div class="courses">Courses</div>
+      <div class="courses">
+        <div class="container">
+          <div class="card-header m-2">
+            <h5 class="m-0">Courses</h5>
+            <a href="#" class="view-all">
+              View all
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="slider-wrapper">
+            <div
+              id="coursesCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="course-card">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 4h 59m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <h3 class="course-title">
+                          UJ Online Short Learning Programme
+                        </h3>
+                        <div class="course-price">₹399</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="course-card">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 1h 45m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <h3 class="course-title">WITS Online CVO Programme</h3>
+                        <div class="course-price">₹399</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#coursesCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#coursesCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
       <!-- Poll section -->
       <div class="poll">Poll</div>
     </div>
