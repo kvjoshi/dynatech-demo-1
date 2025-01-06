@@ -382,3 +382,181 @@ body {
     margin: 0 1rem;
   }
 }
+
+/* Course card style start */
+.course-card {
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin: 10px;
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.registration-badge {
+  position: absolute;
+  left: 20px;
+  background: rgba(195, 255, 124, 0.3);
+  color: #598318;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.duration-badge {
+  position: absolute;
+  right: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.course-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Highlighted Card Specific Styles */
+.course-card--highlighted {
+  border: 1px solid #e0e0e0; /* Light gray border */
+  padding: 15px;
+  background: white; /* Ensure white background */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Restrict max width for better alignment */
+  margin: 10px auto; /* Center card horizontally */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+/* Adjust the badge styles */
+.course-card--highlighted .registration-badge {
+  background: #e9fbe3; /* Light green background */
+  color: #3c763d; /* Green text */
+  font-weight: 500;
+  border-radius: 15px;
+  padding: 4px 10px;
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.course-card--highlighted .duration-badge {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6c757d; /* Muted text color */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Image Styling */
+.course-card--highlighted .course-image {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-card--highlighted .course-image img {
+  max-width: 100%; /* Ensure image scales with the card */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Title & Price */
+.course-card--highlighted .course-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.course-card--highlighted .course-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 576px) {
+  .course-card--highlighted {
+    max-width: 340px; /* Slightly larger card for small devices */
+  }
+}
+
+@media (min-width: 768px) {
+  .course-card--highlighted {
+    max-width: 400px; /* Increase size for tablets */
+  }
+
+  .course-card--highlighted .registration-badge,
+  .course-card--highlighted .duration-badge {
+    font-size: 14px; /* Larger text on tablets */
+    padding: 6px 12px;
+  }
+
+  .course-card--highlighted .course-title {
+    font-size: 18px;
+  }
+
+  .course-card--highlighted .course-price {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .course-card--highlighted {
+    max-width: 450px; /* Larger size for desktops */
+  }
+}
+
+@media (max-width: 575px) {
+  .course-card--highlighted {
+    padding: 10px;
+    max-width: 100%; /* Ensure it fills smaller screens */
+  }
+
+  .course-card--highlighted .registration-badge,
+  .course-card--highlighted .duration-badge {
+    font-size: 10px;
+    padding: 3px 8px; /* Smaller badges */
+  }
+
+  .course-card--highlighted .course-title {
+    font-size: 14px;
+  }
+
+  .course-card--highlighted .course-price {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-card {
+    margin: 10px 5px;
+  }
+
+  .slider-wrapper {
+    padding: 0 45px;
+  }
+}
