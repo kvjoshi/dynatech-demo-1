@@ -11,7 +11,6 @@
   --dark: #151410;
   --info: #b3abf6;
   --radius: 2.25rem;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -311,7 +310,6 @@ body {
   border-radius: 24px;
   border: 1px solid #e5e5e5;
   background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
 
   height: 185px;
@@ -480,7 +478,6 @@ body {
 .course-card {
   border-radius: 15px;
   background: white;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   margin: 10px;
   transition: transform 0.3s;
   position: relative;
@@ -511,13 +508,6 @@ body {
   border-radius: 12px;
 }
 
-.course-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #333;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1);
@@ -536,7 +526,6 @@ body {
   width: 100%;
   max-width: 326px;
   margin: 10px auto; /* Center card horizontally */
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
 }
 
 /* Adjust the badge styles */
@@ -580,17 +569,16 @@ body {
 
 /* Title & Price */
 .course-card--highlighted .course-title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: #333;
   margin: 10px 0;
   text-align: center;
-  max-width: 126px;
-  overflow: auto;
+  max-width: 180px;
 }
 
 .course-card--highlighted .course-price {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   color: #000;
   text-align: center;
