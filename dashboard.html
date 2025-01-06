@@ -132,40 +132,41 @@
             </a>
           </div>
           <div class="card-body p-0 d-flex flex-column gap-3">
-            <!-- Event Item 1 -->
-            <div class="event-item">
-              <div class="event-icon">
-                <img src="./assets/img/event1.svg" alt="" />
+            <div
+              class="d-flex justify-content-between align-items-center border rounded p-3"
+            >
+              <!-- Left Section -->
+              <div class="d-flex gap-3">
+                <div>
+                  <div class="event-date">1st January 2024</div>
+                  <img
+                    class="img-fluid"
+                    src="./assets/img/event1.svg"
+                    alt="Event Image"
+                    style="max-width: 100px"
+                  />
+                  <h6 class="event-title mt-2 mb-1">
+                    Bank of England Economic Update
+                  </h6>
+                  <div class="event-date">Ends on 2nd Jan 2024</div>
+                </div>
               </div>
-              <div class="event-details d-flex pt-2">
-                <div class="event-date">1st January 2024</div>
-                <h6 class="event-title">Bank of England Economic Update</h6>
-                <div class="event-date">Ends on 2nd Jan 2024</div>
-                <div class="event-price">₹699</div>
-              </div>
-            </div>
-            <!-- Event Item 2 -->
-            <div class="event-item">
-              <div class="event-icon">
-                <img src="./assets/img/event1.svg" alt="" />
-              </div>
-              <div class="event-details d-flex pt-2">
-                <div class="event-date">1st January 2024</div>
-                <h6 class="event-title">Bank of England Economic Update</h6>
-                <div class="event-date">Ends on 2nd Jan 2024</div>
-                <div class="event-price">₹699</div>
-              </div>
-            </div>
-            <!-- Event Item 3 -->
-            <div class="event-item">
-              <div class="event-icon">
-                <img src="./assets/img/event1.svg" alt="" />
-              </div>
-              <div class="event-details d-flex pt-2">
-                <div class="event-date">1st January 2024</div>
-                <h6 class="event-title">Bank of England Economic Update</h6>
-                <div class="event-date">Ends on 2nd Jan 2024</div>
-                <div class="event-price">₹699</div>
+              <!-- Right Section -->
+              <div class="d-flex text-end">
+                <div class="event-price mb-2">₹699</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-chevron-right border rounded-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
               </div>
             </div>
           </div>
@@ -366,7 +367,107 @@
         </div>
       </div>
       <!-- Poll section -->
-      <div class="poll">Poll</div>
+      <div class="poll">
+        <div class="container">
+          <div class="card-header m-2">
+            <h5 class="m-0">Poll</h5>
+            <a href="#" class="view-all">
+              View all
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </a>
+          </div>
+          <h6>
+            Which account certifications do you hold in addition to being a
+            Chartered accountant?
+          </h6>
+
+          <div class="main-wrapper">
+            <div class="progress-wrapper">
+              <input
+                type="radio"
+                id="cma"
+                name="certification"
+                class="radio-input"
+              />
+              <div class="progress-container">
+                <div class="progress-fill fill-cma"></div>
+                <div class="text-container">
+                  <span class="progress-text"
+                    >Certified Management Accountant (CMA)</span
+                  >
+                  <span class="progress-percent">75%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-wrapper">
+              <input
+                type="radio"
+                id="cpa"
+                name="certification"
+                class="radio-input"
+              />
+              <div class="progress-container">
+                <div class="progress-fill fill-cpa"></div>
+                <div class="text-container">
+                  <span class="progress-text"
+                    >Certified Public Accountant (CPA)</span
+                  >
+                  <span class="progress-percent">60%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-wrapper">
+              <input
+                type="radio"
+                id="acca"
+                name="certification"
+                class="radio-input"
+              />
+              <div class="progress-container">
+                <div class="progress-fill fill-acca"></div>
+                <div class="text-container">
+                  <span class="progress-text"
+                    >Association of Chartered Certified Accountants (ACCA)</span
+                  >
+                  <span class="progress-percent">0%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress-wrapper">
+              <input
+                type="radio"
+                id="cia"
+                name="certification"
+                class="radio-input"
+              />
+              <div class="progress-container">
+                <div class="progress-fill fill-cia"></div>
+                <div class="text-container">
+                  <span class="progress-text"
+                    >Certified Internal Auditor (CIA)</span
+                  >
+                  <span class="progress-percent">40%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -420,6 +521,54 @@
 
       // Initial setup
       updateCarousel();
+
+      // Poll Card Script
+
+      function updateProgressBars() {
+        const progressContainers = document.querySelectorAll(
+          ".progress-container"
+        );
+
+        progressContainers.forEach((container) => {
+          const progressFill = container.querySelector(".progress-fill");
+          const progressPercent = container.querySelector(".progress-percent");
+
+          // Get the percentage value from the span
+          const percentText = progressPercent.textContent;
+          const value = parseInt(percentText, 10);
+
+          if (value > 0) {
+            progressFill.style.width = `${value}%`;
+            progressFill.style.display = "block";
+          } else {
+            progressFill.style.width = "0%";
+            progressFill.style.display = "none";
+          }
+        });
+      }
+
+      // Initial update
+      document.addEventListener("DOMContentLoaded", updateProgressBars);
+
+      // Watch for changes in progress-percent spans
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (
+            mutation.type === "characterData" ||
+            mutation.type === "childList"
+          ) {
+            updateProgressBars();
+          }
+        });
+      });
+
+      document.querySelectorAll(".progress-percent").forEach((span) => {
+        observer.observe(span, {
+          characterData: true,
+          childList: true,
+          subtree: true,
+        });
+      });
     </script>
   </body>
 </html>
