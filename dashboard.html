@@ -15,41 +15,43 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="grid">
-      <!-- Sidebar section-->
-      <div class="sidebar">
-        <div class="d-flex flex-column gap-3">
+    <!-- Sidebar section-->
+    <aside class="sidebar">
+      <div class="d-flex flex-column gap-4">
+        <div class="d-flex justify-content-center">
           <a href="" class="notification">
             <img src="assets/img/bell-dot.svg" alt="" />
           </a>
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/home.svg" alt="" />
-            <span>Home</span>
-          </a>
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/heart-handshake.svg" alt="" />
-            <span>Communities</span>
-          </a>
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/calendar.svg" alt="" />
-            <span>Events</span>
-          </a>
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/book-open.svg" alt="" />
-            <span>Courses</span>
-          </a>
+        </div>
+        <a href="#" class="sidebar-item sidebar-item-selected">
+          <img src="assets/img/home.svg" alt="" />
+          <span>Home</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <img src="assets/img/heart-handshake.svg" alt="" />
+          <span>Communities</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <img src="assets/img/calendar.svg" alt="" />
+          <span>Events</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <img src="assets/img/book-open.svg" alt="" />
+          <span>Courses</span>
+        </a>
 
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/news_articles.svg" alt="" />
-            <span>News & Articles</span>
-          </a>
-        </div>
-        <div class="">
-          <a href="#">
-            <img src="assets/img/logout.svg" alt="" />
-          </a>
-        </div>
+        <a href="#" class="sidebar-item">
+          <img src="assets/img/newspaper.svg" alt="" />
+          <span>News & Articles</span>
+        </a>
       </div>
+      <div class="d-flex justify-content-center">
+        <a href="#" class="logout">
+          <img src="assets/img/logout.svg" alt="" />
+        </a>
+      </div>
+    </aside>
+    <div class="grid">
       <!-- Profile & Account section -->
       <div class="top">
         <div class="d-flex justify-content-between h-100 gap-3">
@@ -62,6 +64,7 @@
               </div>
             </div>
           </div>
+
           <div class="card w-100">
             <h1>Account</h1>
           </div>
