@@ -273,17 +273,19 @@ body {
 
 .slider-wrapper {
   position: relative;
-  padding: 0 60px;
+  padding: 0 40px;
 }
 
 .community-card {
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 24px;
+  border: 1px solid #e5e5e5;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  max-height: 185px;
-  max-width: 208px;
+
+  height: 185px;
+  width: 208px;
   transition: transform 0.3s;
 }
 
@@ -405,7 +407,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 2px;
   white-space: nowrap;
 }
 
@@ -475,6 +477,8 @@ body {
   right: 20px;
   color: #666;
   font-size: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
 }
 
 .course-title {
@@ -500,22 +504,23 @@ body {
   justify-content: space-between;
   position: relative;
   width: 100%;
-  max-width: 300px; /* Restrict max width for better alignment */
+  max-width: 326px;
   margin: 10px auto; /* Center card horizontally */
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
 }
 
 /* Adjust the badge styles */
 .course-card--highlighted .registration-badge {
-  background: #e9fbe3; /* Light green background */
-  color: #3c763d; /* Green text */
-  font-weight: 500;
+  background: #e2f381;
+  color: #000;
+  font-weight: 400;
   border-radius: 15px;
   padding: 4px 10px;
   font-size: 12px;
   position: absolute;
   top: 10px;
   left: 10px;
+  border-radius: 12px;
 }
 
 .course-card--highlighted .duration-badge {
@@ -531,33 +536,35 @@ body {
 .course-card--highlighted .course-image {
   margin: 20px 0;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   max-width: 168px;
   max-height: 105px;
 }
 
 .course-card--highlighted .course-image img {
-  max-width: 100%; /* Ensure image scales with the card */
-  height: auto;
+  max-width: 114px;
+  max-height: 105px;
   border-radius: 10px;
 }
 
 /* Title & Price */
 .course-card--highlighted .course-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #333;
   margin: 10px 0;
   text-align: center;
+  max-width: 126px;
+  overflow: auto;
 }
 
 .course-card--highlighted .course-price {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   color: #000;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 28px;
 }
 
 /* Responsive Media Queries */
