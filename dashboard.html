@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /* variables */
+      :root {
+        --primary: #f9f9f9;
+        --secondary: #e2f381;
+        --success: #28a745;
+        --info: #17a2b8;
+        --warning: #ffc107;
+        --danger: #dc3545;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --radius: 2.25rem;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        background-color: #e5e5e5;
+      }
+
+      .nav-item {
+      }
+
+      .nav-selected {
+        background-color: var(--secondary);
+      }
+
+      .rounded-default {
+        border-radius: var(--radius) !important;
+      }
+
+      .shadow-default {
+        box-shadow: var(--shadow);
+      }
+
+      .card {
+        background-color: var(--primary);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 1rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .grid > div:not(.top) {
+        background-color: var(--primary);
+        border-radius: var(--radius) !important;
+        box-shadow: var(--shadow);
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .sidebar {
+        grid-column: 1;
+        grid-row: 1 / span 14;
+        height: 96vh;
+        background-color: #151410 !important;
+      }
+
+      .top {
+        grid-column: 2 / span 12;
+        grid-row: 1 / span 2;
+      }
+
+      .news-article {
+        grid-column: 2 / span 12;
+        grid-row: 3 / span 4;
+      }
+
+      .community {
+        grid-column: 2 / span 6;
+        grid-row: 7 / span 4;
+      }
+
+      .events {
+        grid-column: 8 / span 6;
+        grid-row: 7 / span 4;
+      }
+
+      .courses {
+        grid-column: 2 / span 6;
+        grid-row: 11 / span 4;
+      }
+
+      .poll {
+        grid-column: 8 / span 6;
+        grid-row: 11 / span 4;
+      }
+
+      /* Events style start*/
+      .carousel-container {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel-track {
+        display: flex;
+        gap: 1.25rem;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide {
+        min-width: calc((100% - 2 * 1.25rem) / 3);
+        box-sizing: border-box;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 1.5rem;
+      }
+
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: white;
+        color: rgba(0, 0, 0, 0.5);
+        padding: 4px 8px;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+
+      .carousel-button.prev {
+        left: 0px;
+      }
+
+      .carousel-button.next {
+        right: 0px;
+      }
+
+      @media (max-width: 768px) {
+        .carousel-slide {
+          min-width: 100%;
+        }
+      }
+
+      /* Events style end */
+
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+
+        .sidebar {
+          display: none;
+        }
+
+        .sidebar,
+        .top,
+        .news-article,
+        .community,
+        .events,
+        .courses,
+        .poll {
+          grid-column: 1;
+          grid-row: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <!-- Sidebar section-->
+      <div class="sidebar">
+        <a href="" class="nav-selected">
+          <img src="assets/img/bell-dot.svg" alt="" />
+        </a>
+      </div>
+      <!-- Profile & Account section -->
+      <div class="top">
+        <div class="d-flex justify-content-between h-100 gap-3">
+          <div class="card w-100">
+            <div class="d-flex gap-3 justify-content-start align-items-start">
+              <img src="assets/img/person.svg" alt="" width="32" />
+              <div>
+                <h1>Jordan Bisoph</h1>
+                <p>Support@jordan.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="card w-100">
+            <h1>Account</h1>
+          </div>
+        </div>
+      </div>
+      <!-- News & Article section -->
+      <div class="news-article">
+        <div class="d-flex justify-content-between">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Article</a>
+            </li>
+          </ul>
+          <div><a href="#">View all ></a></div>
+        </div>
+
+        <div class="carousel-container mt-3 px-5">
+          <button class="carousel-button prev">←</button>
+          <button class="carousel-button next">→</button>
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="https://placehold.co/550x150" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/550x150" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/550x150" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/550x150" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="https://placehold.co/550x150" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events section -->
+      <div class="events">Events</div>
+      <!-- Community section -->
+      <div class="community">Community</div>
+      <!-- Courses section -->
+      <div class="courses">Courses</div>
+      <!-- Poll section -->
+      <div class="poll">Poll</div>
+    </div>
+
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const slides = Array.from(track.children);
+      const nextButton = document.querySelector(".next");
+      const prevButton = document.querySelector(".prev");
+
+      let currentIndex = 0;
+      const slidesToShow = window.innerWidth <= 768 ? 1 : 3;
+      const slideWidth = 100 / slidesToShow;
+
+      // Set initial styles
+      slides.forEach((slide) => {
+        slide.style.flexBasis = `${slideWidth}%`;
+      });
+
+      // Update carousel position
+      const updateCarousel = () => {
+        const offset = -currentIndex * slideWidth;
+        track.style.transform = `translateX(${offset}%)`;
+
+        // Update button states
+        // prevButton.style.display = currentIndex === 0 ? "none" : "block";
+        // nextButton.style.display =
+        //   currentIndex >= slides.length - slidesToShow ? "none" : "block";
+      };
+
+      // Event listeners
+      nextButton.addEventListener("click", () => {
+        if (currentIndex < slides.length - slidesToShow) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+
+      // Handle resize
+      window.addEventListener("resize", () => {
+        const newSlidesToShow = window.innerWidth <= 768 ? 1 : 3;
+        if (newSlidesToShow !== slidesToShow) {
+          location.reload();
+        }
+      });
+
+      // Initial setup
+      updateCarousel();
+    </script>
+  </body>
+</html>
