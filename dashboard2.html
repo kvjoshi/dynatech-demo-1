@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --primary: #f9f9f9;
+        --secondary: #e2f381;
+        --border: #929292;
+        --dark: #151410;
+        --info: #b3abf6;
+        --radius: 2.25rem;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        background-color: #e5e5e5;
+      }
+
+      .container {
+        padding: 2rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .grid {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+      }
+
+      .grid > div {
+        background-color: var(--primadry);
+      }
+
+      /* Sidebar style start */
+      .sidebar {
+        height: 92vh;
+        width: 170px;
+        background-color: var(--dark) !important;
+        border-radius: 1.5rem;
+        /* padding: 1.25rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 2rem;
+      }
+
+      .notification,
+      .logout {
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      .sidebar-item {
+        padding: 0.8rem 1rem;
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .sidebar-item-selected {
+        background-color: var(--secondary);
+        color: var(--dark);
+        border: none;
+      }
+
+      .sidebar-item img {
+        width: 1.5rem;
+      }
+
+      .sidebar-item span {
+        font-size: 12px;
+        font-weight: 200;
+      }
+      /* Sidebar style end */
+
+      /* Top style start */
+      .top {
+        grid-column: span 12;
+      }
+
+      .top > div {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      /* Top style end */
+
+      /* Media Queries start */
+      @media (max-width: 425px) {
+        .top > div {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+          flex-direction: column;
+        }
+
+        .sidebar {
+          display: none;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar start -->
+      <aside class="sidebar">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+          "
+        >
+          <div style="display: flex; justify-content: center">
+            <a href="" class="notification">
+              <img src="assets/img/bell-dot.svg" alt="" />
+            </a>
+          </div>
+          <a href="#" class="sidebar-item sidebar-item-selected">
+            <img src="assets/img/home.svg" alt="" />
+            <span>Home</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <img src="assets/img/heart-handshake.svg" alt="" />
+            <span>Communities</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <img src="assets/img/calendar.svg" alt="" />
+            <span>Events</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <img src="assets/img/book-open.svg" alt="" />
+            <span>Courses</span>
+          </a>
+
+          <a href="#" class="sidebar-item">
+            <img src="assets/img/newspaper.svg" alt="" />
+            <span>News & Articles</span>
+          </a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="logout">
+            <img src="assets/img/logout.svg" alt="" />
+          </a>
+        </div>
+      </aside>
+      <!-- Sidebar end -->
+      <div class="grid">
+        <!-- Top start -->
+        <div class="top">
+          <div>
+            <!-- Profile -->
+            <div class="card-custom w-100">
+              <div class="d-flex gap-3 justify-content-start align-items-start">
+                <div class="top-item">
+                  <img src="assets/img/user-round.svg" alt="" width="32" />
+                </div>
+                <div class="w-100">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5>Jordan Bisoph</h5>
+                      <p class="fs-16">Support@jordan.com</p>
+                    </div>
+                    <div
+                      class="d-flex flex-column justify-content-center align-items-center"
+                    >
+                      <div class="top-item-action">
+                        <img src="assets/img/pencil.svg" alt="" />
+                      </div>
+                      <p class="fs-12 mt-2">Edit</p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-4 mt-2">
+                    <div>
+                      <div class="fs-12">Membership</div>
+                      <div class="fs-18">GAA Member</div>
+                    </div>
+                    <div>
+                      <div class="fs-12">ID</div>
+                      <div class="fs-18">34560009</div>
+                    </div>
+                    <div>
+                      <div class="fs-12">Active</div>
+                      <div class="fs-18">7th January 2024</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Account -->
+            <div class="card-custom w-100">
+              <div class="account-grid">
+                <div class="account-grid-img">
+                  <div class="top-item">
+                    <img
+                      src="assets/img/badge-dollar-sign.svg"
+                      alt=""
+                      width="32"
+                    />
+                  </div>
+                </div>
+                <div class="account-grid-content">
+                  <h5>1,560/-</h5>
+                  <p class="fs-16">Available Balance</p>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center gap-3 account-grid-action"
+                >
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <div class="top-item-action">
+                      <img src="assets/img/notebook-pen.svg" alt="" />
+                    </div>
+                    <p class="fs-12 mt-2">Invoice</p>
+                  </div>
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <div class="top-item-action">
+                      <img src="assets/img/credit.svg" alt="" />
+                    </div>
+                    <p class="fs-12 mt-2">Credit</p>
+                  </div>
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <div class="top-item-action">
+                      <img src="assets/img/scroll-text.svg" alt="" />
+                    </div>
+                    <p class="fs-12 mt-2">Statement</p>
+                  </div>
+                </div>
+                <div class="mt-2 account-grid-link">
+                  <div>View Details ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Top end -->
+        <div class="news">news</div>
+        <div class="events">events</div>
+        <div class="community">community</div>
+        <div class="courses">courses</div>
+        <div class="poll">poll</div>
+      </div>
+    </div>
+  </body>
+</html>
