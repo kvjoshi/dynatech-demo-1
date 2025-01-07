@@ -192,7 +192,7 @@
         <!-- Events section -->
         <div class="events p-2">
           <div class="container">
-            <div class="card-header m-2">
+            <div class="card-header">
               <h5 class="m-0">Events</h5>
               <a href="#" class="view-all">
                 View all
@@ -256,7 +256,7 @@
                   >
                     <!-- Left Section -->
                     <div
-                      class="d-flex gap-3 justify-content-center align-items-center"
+                      class="d-flex gap-2 justify-content-center align-items-center"
                     >
                       <div class="d-flex align-items-center gap-3">
                         <div class="d-flex align-items-center gap-8">
@@ -298,9 +298,9 @@
           </div>
         </div>
         <!-- Community section -->
-        <div class="community p-2">
+        <div class="community p-2 p-md-0">
           <div class="container">
-            <div class="card-header m-2">
+            <div class="card-header">
               <h5 class="m-0">Communities</h5>
               <a href="#" class="view-all">
                 View all
@@ -377,11 +377,11 @@
         <!-- Courses section -->
         <div class="courses p-2">
           <div class="container">
-            <div class="card-header m-2">
+            <div class="card-header">
               <h5 class="m-0">Courses</h5>
               <a href="#" class="view-all">
                 View all
-                <img src="./assets/img/viewall.svg" height="24px" alt="" />
+                <img src="./assets/img/viewall.svg" height="24" alt="" />
               </a>
             </div>
 
@@ -392,81 +392,165 @@
                 data-bs-ride="carousel"
               >
                 <div class="carousel-inner">
+                  <!-- First Slide -->
                   <div class="carousel-item active">
-                    <div class="row">
-                      <div class="col-12 col-md-6">
-                        <div class="course-card course-card--highlighted">
-                          <span class="registration-badge"
-                            >Registrations Open</span
-                          >
-                          <span class="duration-badge">Duration: 4h 59m</span>
-                          <div class="course-image">
-                            <img
-                              src="./assets/img/course1.svg"
-                              alt="UJ Online Course"
-                            />
-                          </div>
-                          <div class="d-flex justify-content-between">
-                            <h3 class="course-title text-start fw-normal">
-                              UJ Online Short Learning Programme
-                            </h3>
-                            <div class="course-price">₹399</div>
-                          </div>
+                    <!-- Wrapper div for desktop layout -->
+                    <div class="d-none d-md-flex justify-content-between">
+                      <div class="course-card course-card--highlighted">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 4h 59m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <h3 class="course-title text-start fw-normal">
+                            UJ Online Short Learning Programme
+                          </h3>
+                          <div class="course-price">₹399</div>
                         </div>
                       </div>
-                      <div class="col-12 col-md-6">
-                        <div class="course-card course-card--highlighted">
-                          <span class="registration-badge"
-                            >Registrations Open</span
-                          >
-                          <span class="duration-badge">Duration: 4h 59m</span>
-                          <div class="course-image">
-                            <img
-                              src="./assets/img/course1.svg"
-                              alt="UJ Online Course"
-                            />
-                          </div>
-                          <div class="d-flex justify-content-between">
-                            <h3 class="course-title text-start fw-normal">
-                              UJ Online Short Learning Programme
-                            </h3>
-                            <div class="course-price">₹399</div>
-                          </div>
+
+                      <div class="course-card course-card--highlighted">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 4h 59m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <h3 class="course-title text-start fw-normal">
+                            UJ Online Short Learning Programme
+                          </h3>
+                          <div class="course-price">₹399</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mobile layout (single card) -->
+                    <div class="d-md-none">
+                      <div class="course-card course-card--highlighted">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 4h 59m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <h3 class="course-title text-start fw-normal">
+                            UJ Online Short Learning Programme
+                          </h3>
+                          <div class="course-price">₹399</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                    <!-- Wrapper div for desktop layout -->
+                    <div class="d-none d-md-flex justify-content-between">
+                      <div class="course-card course-card--highlighted">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 4h 59m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <h3 class="course-title text-start fw-normal">
+                            UJ Online Short Learning Programme
+                          </h3>
+                          <div class="course-price">₹399</div>
+                        </div>
+                      </div>
+
+                      <div class="course-card course-card--highlighted">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 4h 59m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <h3 class="course-title text-start fw-normal">
+                            UJ Online Short Learning Programme
+                          </h3>
+                          <div class="course-price">₹399</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mobile layout (single card) -->
+                    <div class="d-md-none">
+                      <div class="course-card course-card--highlighted">
+                        <span class="registration-badge"
+                          >Registrations Open</span
+                        >
+                        <span class="duration-badge">Duration: 4h 59m</span>
+                        <div class="course-image">
+                          <img
+                            src="./assets/img/course1.svg"
+                            alt="UJ Online Course"
+                          />
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <h3 class="course-title text-start fw-normal">
+                            UJ Online Short Learning Programme
+                          </h3>
+                          <div class="course-price">₹399</div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#coursesCarousel"
+                  data-bs-slide="prev"
+                >
+                  <img src="./assets/img/arrow-left.svg" height="32" alt="" />
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#coursesCarousel"
+                  data-bs-slide="next"
+                >
+                  <img src="./assets/img/arrow-right.svg" height="32" alt="" />
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              <button
-                class="carousel-control-prev border"
-                style="border-radius: 12px"
-                type="button"
-                data-bs-target="#coursesCarousel"
-                data-bs-slide="prev"
-              >
-                <img src="./assets/img/arrow-left.svg" height="32px" alt="" />
-
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next border"
-                style="border-radius: 12px"
-                type="button"
-                data-bs-target="#coursesCarousel"
-                data-bs-slide="next"
-              >
-                <img src="./assets/img/arrow-right.svg" height="32px" alt="" />
-
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
           </div>
         </div>
         <!-- Poll section -->
         <div class="poll p-2">
           <div class="container">
-            <div class="card-header m-2">
+            <div class="card-header">
               <h5 class="m-0">Poll</h5>
               <a href="#" class="view-all">
                 View all

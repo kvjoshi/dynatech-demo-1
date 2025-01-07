@@ -3,6 +3,16 @@
   margin: 0;
   padding: 0;
 }
+
+/* Font  */
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Light.ttf") format("truetype"),
+    url("./fonts/Gilroy-Medium.ttf") format("truetype"),
+    url("./fonts/Gilroy-Regular.ttf") format("truetype"),
+    url("./fonts/Gilroy-SemiBold.ttf") format("truetype");
+}
+
 /* variables */
 :root {
   --primary: #f9f9f9;
@@ -16,6 +26,7 @@
 body {
   background-color: #e5e5e5;
   padding: 1.5rem;
+  font-family: "Gilroy", sans-serif;
 }
 
 .nav-selected {
@@ -92,6 +103,7 @@ body {
 .courses {
   grid-column: 1 / span 6;
   grid-row: 11 / span 4;
+  max-height: 270px;
 }
 
 .poll {
@@ -302,16 +314,13 @@ body {
 
 .slider-wrapper {
   position: relative;
-  padding: 0 40px;
+  padding: 0 0px;
 }
 
 .community-card {
-  padding: 10px;
   border-radius: 24px;
   border: 1px solid #e5e5e5;
   background: white;
-  margin: 10px;
-
   height: 185px;
   width: 208px;
   transition: transform 0.3s;
@@ -475,178 +484,277 @@ body {
 }
 
 /* Course card style start */
-.course-card {
-  border-radius: 15px;
-  background: white;
-  margin: 10px;
-  transition: transform 0.3s;
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  background: transparent;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.card-header h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.view-all {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+/* Carousel Container */
+.slider-wrapper {
   position: relative;
-  overflow: hidden;
+  margin: 0 30px;
 }
 
-.course-card:hover {
-  transform: translateY(-5px);
+/* Course Card Styles */
+.course-card--highlighted {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  background: white;
+  border-radius: 15px;
+  position: relative;
+  width: calc(50% - 10px);
+  max-width: 326px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Badge Styles */
 .registration-badge {
   position: absolute;
-  left: 20px;
-  background: rgba(195, 255, 124, 0.3);
-  color: #598318;
-  padding: 6px 12px;
+  left: 10px;
+  top: 10px;
+  background: #e2f381;
+  color: #000;
+  padding: 4px 10px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
+  z-index: 1;
 }
 
 .duration-badge {
   position: absolute;
-  right: 20px;
+  right: 10px;
+  top: 12px;
   color: #666;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-}
-
-/* Highlighted Card Specific Styles */
-.course-card--highlighted {
-  border: 1px solid #e0e0e0; /* Light gray border */
-  padding: 15px;
-  background: white; /* Ensure white background */
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-  max-width: 326px;
-  margin: 10px auto; /* Center card horizontally */
-}
-
-/* Adjust the badge styles */
-.course-card--highlighted .registration-badge {
-  background: #e2f381;
-  color: #000;
-  font-weight: 400;
-  border-radius: 15px;
   padding: 4px 10px;
-  font-size: 12px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border-radius: 12px;
+  background: white;
+  z-index: 1;
 }
 
-.course-card--highlighted .duration-badge {
-  font-size: 12px;
-  font-weight: 400;
-  color: #6c757d; /* Muted text color */
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-/* Image Styling */
-.course-card--highlighted .course-image {
-  margin: 20px 0;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+/* Course Image Styles */
+.course-image {
   max-width: 168px;
   max-height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.course-card--highlighted .course-image img {
-  max-width: 114px;
+.course-image img {
   max-height: 105px;
+  max-width: 168px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Title & Price */
-.course-card--highlighted .course-title {
-  font-size: 12px;
+/* Course Content Styles */
+.course-title {
+  font-size: 16px;
   font-weight: 600;
   color: #333;
-  margin: 10px 0;
-  text-align: center;
-  max-width: 180px;
+  line-height: 1.4;
+  max-width: 80%;
 }
 
-.course-card--highlighted .course-price {
-  font-size: 12px;
-  font-weight: 400;
+.course-price {
+  font-size: 16px;
+  font-weight: 600;
   color: #000;
-  text-align: center;
-  margin-top: 28px;
+  display: flex;
+  align-items: center;
 }
 
-/* Responsive Media Queries */
-@media (min-width: 576px) {
-  .course-card--highlighted {
-    max-width: 340px; /* Slightly larger card for small devices */
-  }
+/* Carousel Navigation Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
 }
 
+.carousel-control-prev {
+  left: -40px;
+}
+
+.carousel-control-next {
+  right: -40px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #f8f9fa;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  opacity: 1;
+}
+
+/* Desktop Layout Styles */
 @media (min-width: 768px) {
+  .d-md-flex {
+    display: flex !important;
+  }
+
+  .justify-content-between {
+    justify-content: space-between !important;
+  }
+
   .course-card--highlighted {
-    max-width: 400px; /* Increase size for tablets */
-  }
-
-  .course-card--highlighted .registration-badge,
-  .course-card--highlighted .duration-badge {
-    font-size: 14px; /* Larger text on tablets */
-    padding: 6px 12px;
-  }
-
-  .course-card--highlighted .course-title {
-    font-size: 18px;
-  }
-
-  .course-card--highlighted .course-price {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 992px) {
-  .course-card--highlighted {
-    max-width: 450px; /* Larger size for desktops */
-  }
-}
-
-@media (max-width: 575px) {
-  .course-card--highlighted {
-    padding: 10px;
-    max-width: 100%; /* Ensure it fills smaller screens */
-  }
-
-  .course-card--highlighted .registration-badge,
-  .course-card--highlighted .duration-badge {
-    font-size: 10px;
-    padding: 3px 8px; /* Smaller badges */
-  }
-
-  .course-card--highlighted .course-title {
-    font-size: 14px;
-  }
-
-  .course-card--highlighted .course-price {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .course-card {
-    margin: 10px 5px;
+    flex: 0 0 calc(50% - 10px);
   }
 
   .slider-wrapper {
-    padding: 0 45px;
+    padding: 0;
   }
+}
+
+/* Tablet Styles */
+@media (max-width: 991px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .course-card--highlighted {
+    max-width: 300px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .slider-wrapper {
+    margin: 0;
+    padding: 0 25px;
+  }
+
+  .course-card--highlighted {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 32px;
+    height: 32px;
+  }
+
+  .carousel-control-prev {
+    left: -10px;
+  }
+
+  .carousel-control-next {
+    right: -10px;
+  }
+
+  .course-title {
+    font-size: 14px;
+  }
+
+  .course-price {
+    font-size: 14px;
+  }
+
+  .registration-badge,
+  .duration-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .d-md-none {
+    display: block !important;
+  }
+
+  .d-none {
+    display: none !important;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .registration-badge,
+  .duration-badge {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .course-title {
+    font-size: 12px;
+    max-width: 90%;
+  }
+
+  .course-price {
+    font-size: 12px;
+  }
+
+  .course-image {
+    height: 140px;
+    margin: 25px auto 10px;
+  }
+
+  .slider-wrapper {
+    padding: 0 20px;
+  }
+}
+
+/* Visibility utilities */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 /* Poll Card styling */
