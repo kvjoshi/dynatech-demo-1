@@ -21,6 +21,131 @@
         --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
       body {
         background-color: #e5e5e5;
       }
@@ -100,19 +225,119 @@
 
       .top > div {
         display: flex;
+        width: 100%;
+        gap: 1.875rem;
+      }
+
+      .top-card {
+        width: 100%;
+        background-color: var(--primary);
+        border-radius: 1.5rem;
+        padding: 1.25rem;
+      }
+
+      .top-card-header {
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+      }
+
+      .top-card-img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .top-card-img-action {
+        width: 50px;
+        height: 50px;
+        border-radius: 0.75rem;
+        background-color: var(--info);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .profile-top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         gap: 1rem;
       }
+
+      .profile-top-content {
+        flex-grow: 1;
+        align-self: flex-start;
+      }
+
+      .profile-top-content h5 {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .profile-top-content p {
+        font-size: 16px;
+      }
+
+      .profile-top-action p {
+        font-size: 12px;
+      }
+
+      .profile-bottom {
+        width: 100%;
+        display: flex;
+        margin-top: 30px;
+        gap: 1rem;
+        padding-left: 66px;
+      }
+
+      .profile-bottom h6 {
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+
       /* Top style end */
 
       /* Media Queries start */
       @media (max-width: 425px) {
-        .top > div {
-          flex-direction: column;
+        .top-card-header {
+          gap: 1rem;
+        }
+
+        .profile-top-content h5 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .profile-bottom {
+          margin-top: 20px;
+          padding: 0;
+          justify-content: space-between;
+        }
+
+        .profile-top-action p {
+          display: none;
+        }
+
+        .profile-bottom h6 {
+          margin-bottom: 10px;
+        }
+
+        .profile-bottom p {
+          font-size: 16px;
         }
       }
 
       @media (max-width: 768px) {
+        .top > div {
+          flex-direction: column;
+        }
+
         .container {
           padding: 1rem;
           flex-direction: column;
@@ -179,48 +404,44 @@
         <div class="top">
           <div>
             <!-- Profile -->
-            <div class="card-custom w-100">
-              <div class="d-flex gap-3 justify-content-start align-items-start">
-                <div class="top-item">
-                  <img src="assets/img/user-round.svg" alt="" width="32" />
-                </div>
-                <div class="w-100">
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <h5>Jordan Bisoph</h5>
-                      <p class="fs-16">Support@jordan.com</p>
-                    </div>
-                    <div
-                      class="d-flex flex-column justify-content-center align-items-center"
-                    >
-                      <div class="top-item-action">
-                        <img src="assets/img/pencil.svg" alt="" />
-                      </div>
-                      <p class="fs-12 mt-2">Edit</p>
-                    </div>
+            <div class="top-card">
+              <div class="top-card-header">
+                <div class="profile-top">
+                  <div class="top-card-img">
+                    <img src="assets/img/user-round.svg" alt="" width="35" />
                   </div>
-                  <div class="d-flex gap-4 mt-2">
-                    <div>
-                      <div class="fs-12">Membership</div>
-                      <div class="fs-18">GAA Member</div>
+                  <div class="profile-top-content">
+                    <h5>Jordan Bisoph</h5>
+                    <p>Support@jordan.com</p>
+                  </div>
+                  <div class="profile-top-action">
+                    <div class="top-card-img-action">
+                      <img src="assets/img/pencil.svg" alt="" width="25" />
                     </div>
-                    <div>
-                      <div class="fs-12">ID</div>
-                      <div class="fs-18">34560009</div>
-                    </div>
-                    <div>
-                      <div class="fs-12">Active</div>
-                      <div class="fs-18">7th January 2024</div>
-                    </div>
+                    <p class="fs-12 mt-2">Edit</p>
+                  </div>
+                </div>
+                <div class="profile-bottom">
+                  <div>
+                    <h6>Membership</h6>
+                    <p>GAA Member</p>
+                  </div>
+                  <div>
+                    <h6>ID</h6>
+                    <p>34560009</p>
+                  </div>
+                  <div>
+                    <h6>Active</h6>
+                    <p>7th January 2024</p>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Account -->
-            <div class="card-custom w-100">
+            <div class="top-card">
               <div class="account-grid">
                 <div class="account-grid-img">
-                  <div class="top-item">
+                  <div class="top-card-img">
                     <img
                       src="assets/img/badge-dollar-sign.svg"
                       alt=""
