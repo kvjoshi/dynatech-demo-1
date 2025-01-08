@@ -375,6 +375,7 @@ section {
 .event-title {
   line-height: 24px;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .event-timestamp {
