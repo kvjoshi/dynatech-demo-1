@@ -650,6 +650,43 @@ section {
   transform: translate(-50%, 0);
 }
 
+/* Event page styling start */
+
+.event-list {
+  padding: 0;
+}
+
+.event-list-card-header {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-left: 5px;
+  margin-top: 0;
+  padding: 0px 8px;
+}
+
+.event-list-card-body-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 13px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.event-filter-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  accent-color: #273368;
+}
+/* Event page styling end */
+
+/* Communities page styling start */
+.communities-list {
+  padding: 0;
+}
+
 /* Media Queries start */
 @media (max-width: 768px) {
   nav > ul {
