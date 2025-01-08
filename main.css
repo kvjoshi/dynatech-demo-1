@@ -267,8 +267,7 @@ section {
   border-bottom-left-radius: 4px;
 } */
 
-/* Membership & Accoutn Style start */
-
+/* Membership & Account Style start */
 .membership {
   padding: 0;
   display: flex;
@@ -386,7 +385,6 @@ section {
 }
 
 /* Event style start */
-
 .events {
   padding: 0;
 }
@@ -444,7 +442,6 @@ section {
 }
 
 /* Course style start */
-
 .courses {
   padding: 0;
 }
@@ -499,19 +496,17 @@ section {
   text-align: center;
 }
 
-/* Course Styling end */
-
 /* Communities Styling start */
-
 .communities {
   padding: 0;
+  grid-row: 2 / span 1;
 }
 
 .rounded-image-container {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: center; /* Centers items horizontally */
+  justify-content: center;
 }
 
 .rounded-image {
@@ -525,7 +520,7 @@ section {
   justify-content: center;
   background-color: #ddd;
   box-shadow: 0px 1px 10px 2px #00000066;
-  margin: 8px; /* Optional: Add spacing around each image */
+  margin: 8px;
 }
 
 /* Image Styling */
@@ -552,23 +547,87 @@ section {
 /* Responsive Adjustments */
 @media (max-width: 576px) {
   .rounded-image {
-    width: 72px; /* Smaller size for mobile */
+    width: 72px;
     height: 72px;
   }
 
   .community-overlay-text {
-    font-size: 14px; /* Smaller text for better fit */
+    font-size: 14px;
   }
 
   .rounded-image-container {
-    gap: 12px; /* Reduce spacing between items */
+    gap: 12px;
   }
 }
 
-/* Community styling ends here */
+/* News style start */
+.news {
+  grid-row: 2 / span 3;
+  max-height: fit-content;
+}
+
+.news__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+.news__card__header > h3 {
+  font-weight: 600;
+}
+
+.news__card__body {
+  padding: 26px 2px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
+  overflow-x: auto;
+}
+
+.article__card {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 3px;
+  box-shadow: 0px 2px 4px 0px #00000040;
+}
+
+.article__card > img {
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.article__card__content {
+  padding: 5px;
+}
+
+.article__card__content > h2 {
+  font-weight: 500;
+}
+
+.article__card__content > p {
+  margin-top: 6px;
+  font-size: 10px;
+  color: #676768;
+}
+
+.article__card__content > div {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article__card__content > div > span {
+  color: #9898988c;
+  font-size: 10px;
+}
 
 /* Poll Card  */
-
 .poll {
   padding: 0;
 }
@@ -592,18 +651,41 @@ section {
 }
 
 /* Media Queries start */
-
 @media (max-width: 768px) {
   nav > ul {
     display: none;
-    background-color: red;
   }
 
   main {
     grid-template-columns: 1fr;
   }
 
+  .membership,
+  .events,
+  .courses,
+  .communities,
+  .news,
+  .poll {
+    grid-column: 1;
+  }
+
+  .events {
+    grid-row: 2;
+  }
+
+  .courses {
+    grid-row: 3;
+  }
+
+  .communities {
+    grid-row: 4;
+  }
+
   .news {
-    grid-column: 1 / 2;
+    grid-row: 6;
+  }
+
+  .poll {
+    grid-row: 5;
   }
 }
