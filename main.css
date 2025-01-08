@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -129,12 +130,15 @@ table {
   border-spacing: 0;
 }
 
-/* variables */
+/* Variables */
 :root {
   --primary: #273368;
   --secondary: #1a99d5;
   --accent: #82bf40;
   --background: #f8f8f8;
+  --text-muted: #6c757d;
+  background-color: var(--background);
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
 }
 
@@ -177,6 +181,71 @@ nav ul li > a {
   align-items: center;
 }
 
+.view-all-btn {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  border-radius: 4px;
+  padding: 6px 12px;
+  border: none;
+  font-weight: 400;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.event img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+}
+
+.event span {
+  display: block;
+}
+
+.event span.fw-bold {
+  font-size: 14px;
+  color: #000;
+}
+
+.event span.text-muted {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.card-header h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 0;
+}
+
+/* Popular course card style start */
+
+.course-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #121212;
+}
+
+.course-availability {
+  font-size: 12px;
+  font-weight: 500;
+  color: #404b7c;
+  line-height: 21px;
+}
+.course-duration {
+  color: #98a4b5;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 nav ul li:last-child > a {
   width: 1.5rem;
   height: 1.5rem;
@@ -186,6 +255,8 @@ nav ul li:last-child > a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* Event Item Styles */
 }
 
 main {

@@ -8,12 +8,15 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="main.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css" />
+  </head> 
   <body>
     <header>
       <nav class="container d-flex justify-content-between align-items-center">
@@ -45,8 +48,138 @@
           </div>
         </div>
       </section>
-      <section class="events">Events</section>
-      <section class="courses">Courses</section>
+      <section class="events">
+        <div
+          class="d-flex justify-content-between align-items-center card-header"
+          style="background-color: transparent"
+        >
+          <h3 class="mb-0 fw-bold">Events</h3>
+          <button class="view-all-btn">View All</button>
+        </div>
+        <span
+          style="
+            border-bottom: 2px solid #82bf40;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 23px;
+          "
+        ></span>
+        <div class="card-body" style="padding: 0 16px 16px">
+          <div class="event d-flex align-items-center mb-3">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="fw-bold d-block">
+                SAICA Limpopo District: Ethics for Trainees session
+              </span>
+              <span class="text-muted small">4 min read</span>
+            </div>
+          </div>
+          <div class="event d-flex align-items-center mb-3">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="fw-bold d-block">
+                SAICA Limpopo District: Ethics for Trainees session
+              </span>
+              <span class="text-muted small">4 min read</span>
+            </div>
+          </div>
+          <div class="event d-flex align-items-center">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="fw-bold d-block">
+                SAICA Limpopo District: Ethics for Trainees session
+              </span>
+              <span class="text-muted small">4 min read</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="courses">
+        <div
+          class="d-flex justify-content-between align-items-center card-header"
+          style="background-color: transparent"
+        >
+          <h3 class="mb-0 fw-bold">Popular Courses</h3>
+          <button class="view-all-btn">View All</button>
+        </div>
+        <span
+          style="
+            border-bottom: 2px solid #82bf40;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 23px;
+          "
+        ></span>
+        <div class="card-body" style="padding: 0 16px 16px">
+          <div class="event d-flex align-items-center mb-3">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="course-title d-block">
+                WITS online CVO programme
+              </span>
+              <span class="course-availability">Applications are open</span>
+              <span class="course-duration">Duration : 10 weeks</span>
+            </div>
+          </div>
+          <div class="event d-flex align-items-center mb-3">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="course-title d-block">
+                WITS online CVO programme
+              </span>
+              <span class="course-availability">Applications are open</span>
+              <span class="course-duration">Duration : 10 weeks</span>
+            </div>
+          </div>
+          <div class="event d-flex align-items-center">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="course-title d-block">
+                WITS online CVO programme
+              </span>
+              <span class="course-availability">Applications are open</span>
+              <span class="course-duration">Duration : 10 weeks</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
       <section class="communities">Communities</section>
       <section class="news">News & Articles</section>
       <section class="poll">Poll</section>
