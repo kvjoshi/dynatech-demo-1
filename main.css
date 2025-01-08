@@ -214,7 +214,7 @@ nav > ul li:last-child > a {
 }
 
 main {
-  padding: 60px;
+  padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
@@ -581,13 +581,13 @@ section {
 .news__card__body {
   padding: 26px 2px 7px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 26px;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .article__card {
+  flex: 0 0 200px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 3px;
@@ -595,8 +595,9 @@ section {
 }
 
 .article__card > img {
-  object-fit: cover;
   width: 100%;
+  height: 166px;
+  object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -688,13 +689,25 @@ section {
 }
 
 /* Media Queries start */
+
+@media (max-width: 425px) {
+  .news {
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 768px) {
+  nav > div > img {
+    width: 300px;
+  }
+
   nav > ul {
     display: none;
   }
 
   main {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
   .membership,
