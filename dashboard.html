@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,740 +18,401 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <!-- Sidebar section-->
-    <div class="d-flex flex-column flex-lg-row gap-lg-4">
-      <aside class="sidebar">
-        <div class="d-flex flex-column gap-4">
-          <div class="d-flex justify-content-center">
-            <a href="" class="notification">
-              <img src="assets/img/bell-dot.svg" alt="" />
+    <header>
+      <nav class="container d-flex justify-content-between align-items-center">
+        <div class="h-100 d-flex justify-content-between align-items-center">
+          <img src="assets/img/dynatech-logo-darkbg 1.png" width="350" alt="" />
+        </div>
+        <ul
+          class="h-100"
+        >
+          <li class="nav__item--active"><a href="#">Home</a></li>
+          <li><a href="#">Communities</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./courses.html">Courses</a></li>
+          <li><a href="./news-article.html">News & Articles</a></li>
+          <li>
+            <a href="#">
+              <img src="assets/img/user-round.svg" alt="" width="16" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container dashboard-container">
+      <!-- Membership section -->
+      <section class="membership">
+        <div class="membership__card">
+          <div class="membership__card__header">
+            <h2 class="membership-header-title">Membership</h2>
+            <a href="#" class="shadow-link"><button>Apply Now</button></a>
+          </div>
+          <div class="membership__card__body">
+            <p>
+              You have not applied for any memberships yet, Click on view
+              details to apply for Membership
+            </p>
+          </div>
+        </div>
+        <div class="account__card">
+          <div class="account__card__header">
+            <h2 class="account-header-title">My Account</h2>
+            <a href="" class="shadow-link">
+              <button>View Details</button>
             </a>
           </div>
-          <a href="#" class="sidebar-item sidebar-item-selected">
-            <img src="assets/img/home.svg" alt="" />
-            <span>Home</span>
-          </a>
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/heart-handshake.svg" alt="" />
-            <span>Communities</span>
-          </a>
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/calendar.svg" alt="" />
-            <span>Events</span>
-          </a>
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/book-open.svg" alt="" />
-            <span>Courses</span>
-          </a>
-
-          <a href="#" class="sidebar-item">
-            <img src="assets/img/newspaper.svg" alt="" />
-            <span>News & Articles</span>
-          </a>
-        </div>
-        <div class="d-flex justify-content-center">
-          <a href="#" class="logout">
-            <img src="assets/img/logout.svg" alt="" />
-          </a>
-        </div>
-      </aside>
-      <div class="ms-lg-3 grid">
-        <!-- Profile & Account section -->
-        <div class="top">
-          <div
-            class="d-flex flex-column flex-lg-row justify-content-between h-100 gap-4"
-          >
-            <!-- Profile -->
-            <div class="card-custom w-100">
-              <div class="d-flex gap-3 justify-content-start align-items-start">
-                <div class="top-item">
-                  <img src="assets/img/user-round.svg" alt="" width="32" />
-                </div>
-                <div class="w-100">
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <h5>Jordan Bisoph</h5>
-                      <p class="fs-16">Support@jordan.com</p>
-                    </div>
-                    <div
-                      class="d-flex flex-column justify-content-center align-items-center"
-                    >
-                      <div class="top-item-action">
-                        <img src="assets/img/pencil.svg" alt="" />
-                      </div>
-                      <p class="fs-12 mt-2">Edit</p>
-                    </div>
-                  </div>
-                  <div class="d-flex gap-4 mt-2">
-                    <div>
-                      <div class="fs-12">Membership</div>
-                      <div class="fs-18">GAA Member</div>
-                    </div>
-                    <div>
-                      <div class="fs-12">ID</div>
-                      <div class="fs-18">34560009</div>
-                    </div>
-                    <div>
-                      <div class="fs-12">Active</div>
-                      <div class="fs-18">7th January 2024</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="account__card__body">
+            <div>
+              <h6>Account Balance</h6>
+              <h3>R 0.00</h3>
             </div>
-            <!-- Account -->
-            <div class="card-custom w-100">
-              <div class="account-grid">
-                <div class="account-grid-img">
-                  <div class="top-item">
-                    <img
-                      src="assets/img/badge-dollar-sign.svg"
-                      alt=""
-                      width="32"
-                    />
-                  </div>
-                </div>
-                <div class="account-grid-content">
-                  <h5>1,560/-</h5>
-                  <p class="fs-16">Available Balance</p>
-                </div>
-                <div
-                  class="d-flex justify-content-around align-items-center gap-3 account-grid-action"
-                >
-                  <div
-                    class="d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <div class="top-item-action">
-                      <img src="assets/img/notebook-pen.svg" alt="" />
-                    </div>
-                    <p class="fs-12 mt-2">Invoice</p>
-                  </div>
-                  <div
-                    class="d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <div class="top-item-action">
-                      <img src="assets/img/credit.svg" alt="" />
-                    </div>
-                    <p class="fs-12 mt-2">Credit</p>
-                  </div>
-                  <div
-                    class="d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <div class="top-item-action">
-                      <img src="assets/img/scroll-text.svg" alt="" />
-                    </div>
-                    <p class="fs-12 mt-2">Statement</p>
-                  </div>
-                </div>
-                <div class="mt-2 account-grid-link">
-                  <div>View Details ></div>
-                </div>
+            <div>
+              <div>
+                <img src="assets/img/invoice_icon.svg" width="32" alt="" />
+                <span>Invoices</span>
+              </div>
+              <div>
+                <img src="assets/img/credit_icon.svg" width="32" alt="" />
+                <span>Credit</span>
+              </div>
+              <div>
+                <img src="assets/img/statement_icon.svg" width="25"alt="" />
+                <span>Statement</span>
               </div>
             </div>
           </div>
         </div>
-        <!-- News & Article section -->
-        <div class="news-article py-4">
-          <div class="d-flex justify-content-between">
-            <div class="ms-5"><h5>News & Article</h5></div>
-            <div class="me-3">
-              <a href="#" class="view-all">
-                View all
-                <img src="./assets/img/viewall.svg" height="24px" alt="" />
-              </a>
+      </section>
+      <!-- Events section -->
+      <section class="events">
+        <div
+          class=" card-header spacing d-flex justify-content-between align-items-center"
+        >
+          <h4 class="header-title mb-0">Events</h4>
+          <a href="#" class="shadow-link"><button>View All</button></a>
+        </div>
+        <span
+          style="
+            border-bottom: 1px solid #82bf40;
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 18px;
+            margin-left: 13px;
+            margin-right: 13px;
+            
+          "
+        ></span>
+        <div class="card-body">
+          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="d-block event-title">
+                SAICA Limpopo District: Ethics for Trainees session
+              </span>
+              <span class="event-timestamp">4 min read</span>
             </div>
           </div>
+          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3 ">
+              <span class="d-block event-title">
+                SAICA Limpopo District: Ethics for Trainees session
+              </span>
+              <span class="event-timestamp">4 min read</span>
+            </div>
+          </div>
+          <div class="event d-flex align-items-center ps-3 pb-4">
+            <img
+              src="./assets/img/event1.svg"
+              width="90"
+              height="70"
+              class="img-fluid rounded"
+              alt="Event Image"
+            />
+            <div class="ms-3">
+              <span class="d-block event-title">
+                SAICA Limpopo District: Ethics for Trainees session
+              </span>
+              <span class="event-timestamp">4 min read</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Courses section -->
+      <section class="courses">
+        <div
+          class="d-flex spacing justify-content-between align-items-center card-header"
+        >
+          <h4 class="header-title mb-0">Popular Courses</h4>
+          <a href="#" class="shadow-link"><button>View All</button></a>
 
-          <div style="position: relative; width: 100%">
-            <button class="carousel-button prev" style="border-radius: 12px">
-              <img src="assets/img/arrow-left.svg" height="32px" alt="" />
-            </button>
-            <button class="carousel-button next" style="border-radius: 12px">
-              <img src="assets/img/arrow-right.svg" height="32px" alt="" />
-            </button>
-            <div class="carousel-button-overlay prev-overlay"></div>
-            <div class="carousel-button-overlay next-overlay"></div>
-            <div class="carousel-container mt-2 px-5">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <img src="https://placehold.co/550x150" alt="" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="https://placehold.co/550x150" alt="" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="https://placehold.co/550x150" alt="" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="https://placehold.co/550x150" alt="" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="https://placehold.co/550x150" alt="" />
-                </div>
+        </div>
+        <span
+          style="
+            border-bottom: 1px solid #82bf40;
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 18px;
+            margin-left: 13px;
+            margin-right: 13px;
+            
+          "
+        ></span>
+        <div class="">
+          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+            <div class="square-image">
+              <img src="https://placehold.co/90x70/DFE1E9/png" class="img-fluid rounded" alt="Example Image" />
+              <div class="overlay-text">WITS</div>
+            </div>          
+            <div class="ms-3">
+              <span class="course-title d-block">
+                WITS online CVO programme
+              </span>
+              <span class="course-availability">Applications are open</span>
+              <span class="course-duration">Duration : 10 weeks</span>
+            </div>
+          </div>
+          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+            <div class="square-image">
+              <img src="https://placehold.co/90x70/DFE1E9/png" class="img-fluid rounded" alt="Example Image" />
+              <div class="overlay-text">UJ</div>
+            </div>
+            <div class="ms-3">
+              <span class="course-title d-block">
+                WITS online CVO programme
+              </span>
+              <span class="course-availability">Applications are open</span>
+              <span class="course-duration">Duration : 10 weeks</span>
+            </div>
+          </div>
+          <div class="event d-flex align-items-center ps-3 pb-3">
+            <div class="square-image">
+              <img src="https://placehold.co/90x70/DFE1E9/png" class="img-fluid rounded" alt="Example Image" />
+              <div class="overlay-text">UJ</div>
+            </div>
+            <div class="ms-3">
+              <span class="course-title d-block">
+                WITS online CVO programme
+              </span>
+              <span class="course-availability">Applications are open</span>
+              <span class="course-duration">Duration : 10 weeks</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <!-- Community section -->
+      <section class="communities">
+        <div
+          class="d-flex spacing justify-content-between align-items-center card-header"
+        >
+          <h4 class="header-title mb-0">Our Communities</h4>
+          <a href="#" class="shadow-link"><button>View All</button></a>
+        </div>
+        <span
+          style="
+            border-bottom: 1px solid #82bf40;
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 18px;
+            margin-left: 13px;
+            margin-right: 13px;
+            
+          "
+        ></span>
+        
+        <div class="d-flex justify-content-around p-2">
+          <div class="rounded-image">
+            <img src="/assets/img/com-img-1.png" alt="Example Image" />
+            <div class="community-overlay-text">AGA</div>
+          </div>
+          
+          <div class="rounded-image">
+            <img src="/assets/img/com-img-2.png" alt="Example Image" />
+            <div class="community-overlay-text">ATSA</div>
+          </div>
+          <div class="rounded-image">
+            <img src="/assets/img/com-img-3.png" alt="Example Image" />
+            <div class="community-overlay-text">CAA</div>
+          </div>
+          <div class="rounded-image">
+            <img src="/assets/img/com-img-4.png" alt="Example Image" />
+            <div class="community-overlay-text">GASA</div>
+          </div>
+          
+        </div>
+
+        </div>
+      </section>
+      <!-- News & Article section -->
+      <section class="news w-100">
+        <div class="news__card__header">
+          <h3>Trending News and Articles</h3>
+          <a href="" class="shadow-link"><button>View All</button></a>
+        </div>
+        <div class="news__card__body">
+          <div class="article__card">
+            <img src="https://placehold.co/191x166" alt="">
+            <div class="article__card__content">
+              <h2>Article Name</h2>
+              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <div>
+                <span>10/01/2025</span>
+                <a href="" class="shadow-link">
+                  <button>See More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="article__card">
+            <img src="https://placehold.co/191x166" alt="">
+            <div class="article__card__content">
+              <h2>Article Name</h2>
+              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <div>
+                <span>10/01/2025</span>
+                <a href="" class="shadow-link">
+                  <button>See More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="article__card">
+            <img src="https://placehold.co/191x166" alt="">
+            <div class="article__card__content">
+              <h2>Article Name</h2>
+              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <div>
+                <span>10/01/2025</span>
+                <a href="" class="shadow-link">
+                  <button>See More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="article__card">
+            <img src="https://placehold.co/191x166" alt="">
+            <div class="article__card__content">
+              <h2>Article Name</h2>
+              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <div>
+                <span>10/01/2025</span>
+                <a href="" class="shadow-link">
+                  <button>See More</button>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <!-- Events section -->
-        <div class="events p-2">
-          <div class="container">
-            <div class="card-header">
-              <h5 class="m-0">Events</h5>
-              <a href="#" class="view-all">
-                View all
-                <img src="./assets/img/viewall.svg" height="24px" alt="" />
-              </a>
-            </div>
-            <div class="overflow-auto custom-scrollbar">
-              <!-- Set a fixed max-height -->
-              <div class="d-flex flex-column gap-3">
-                <!-- Card 1 -->
-                <div
-                  class="card-body p-0 d-flex flex-column gap-3 border-bottom"
-                >
-                  <div
-                    class="d-flex justify-content-between align-items-center p-3"
-                  >
-                    <!-- Left Section -->
-                    <div
-                      class="d-flex gap-3 justify-content-center align-items-center"
-                    >
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="d-flex align-items-center gap-8">
-                          <div class="event-date text-start">
-                            1st January <br />2024
-                          </div>
-                          <img
-                            class="img-fluid"
-                            src="./assets/img/event1.svg"
-                            alt="Event Image"
-                            style="max-width: 100px"
-                          />
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <h6 class="event-title mt-2 mb-1">
-                            Bank of England Economic Update
-                          </h6>
-                          <div class="event-date text-start">
-                            2nd January <br />2024
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Right Section -->
-                    <div class="d-flex justify-center items-center gap-3">
-                      <div class="event-price mb-2">₹699</div>
-                      <div class="border border-gray-200 rounded-4 p-1">
-                        <img
-                          src="./assets/img/arrow-right.svg"
-                          alt="right arrow"
-                          width="32px"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="card-body p-0 d-flex flex-column gap-3 border-bottom"
-                >
-                  <div
-                    class="d-flex justify-content-between align-items-center p-3"
-                  >
-                    <!-- Left Section -->
-                    <div
-                      class="d-flex gap-2 justify-content-center align-items-center"
-                    >
-                      <div class="d-flex align-items-center gap-3">
-                        <div class="d-flex align-items-center gap-8">
-                          <div class="event-date text-start">
-                            1st January <br />2024
-                          </div>
-                          <img
-                            class="img-fluid"
-                            src="./assets/img/event1.svg"
-                            alt="Event Image"
-                            style="max-width: 100px"
-                          />
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <h6 class="event-title mt-2 mb-1">
-                            Bank of England Economic Update
-                          </h6>
-                          <div class="event-date text-start">
-                            2nd January <br />2024
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Right Section -->
-                    <div class="d-flex justify-center items-center gap-3">
-                      <div class="event-price mb-2">₹699</div>
-                      <div class="border border-gray-200 rounded-4 p-1">
-                        <img
-                          src="./assets/img/arrow-right.svg"
-                          alt="right arrow"
-                          width="32px"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Community section -->
-        <div class="community p-2 p-md-0">
-          <div class="container">
-            <div class="card-header">
-              <h5 class="m-0">Communities</h5>
-              <a href="#" class="view-all">
-                View all
-                <img src="./assets/img/viewall.svg" height="24px" alt="" />
-              </a>
-            </div>
 
-            <div class="slider-wrapper">
-              <div
-                id="communitiesCarousel"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row">
-                      <div class="col-12 col-md-4">
-                        <div class="community-card text-center border">
-                          <div class="community-logo">
-                            <img src="./assets/img/community1.svg" alt="" />
-                          </div>
-                          <p class="text-muted text-start">
-                            AGA Community for well being
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-4">
-                        <div class="community-card text-center border">
-                          <div class="community-logo">
-                            <img src="./assets/img/community2.svg" alt="" />
-                          </div>
-                          <p class="text-muted text-start">
-                            ATSA Community for welfare
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-4">
-                        <div class="community-card text-center border">
-                          <div class="community-logo">
-                            <img src="./assets/img/community3.svg" alt="" />
-                          </div>
-                          <p class="text-muted text-start">
-                            CAA Community for CSR
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev border"
-                type="button"
-                style="border-radius: 12px"
-                data-bs-target="#communitiesCarousel"
-                data-bs-slide="prev"
-              >
-                <img src="./assets/img/arrow-left.svg" height="32px" alt="" />
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next border"
-                type="button"
-                style="border-radius: 12px"
-                data-bs-target="#communitiesCarousel"
-                data-bs-slide="next"
-              >
-                <img src="./assets/img/arrow-right.svg" height="32px" alt="" />
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Courses section -->
-        <div class="courses p-2">
-          <div class="container">
-            <div class="card-header">
-              <h5 class="m-0">Courses</h5>
-              <a href="#" class="view-all">
-                View all
-                <img src="./assets/img/viewall.svg" height="24" alt="" />
-              </a>
-            </div>
-
-            <div class="slider-wrapper">
-              <div
-                id="coursesCarousel"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner">
-                  <!-- First Slide -->
-                  <div class="carousel-item active">
-                    <!-- Wrapper div for desktop layout -->
-                    <div class="d-none d-md-flex justify-content-between">
-                      <div class="course-card course-card--highlighted">
-                        <span class="registration-badge"
-                          >Registrations Open</span
-                        >
-                        <span class="duration-badge">Duration: 4h 59m</span>
-                        <div class="course-image">
-                          <img
-                            src="./assets/img/course1.svg"
-                            alt="UJ Online Course"
-                          />
-                        </div>
-                        <div class="d-flex justify-content-between">
-                          <h3 class="course-title text-start fw-normal">
-                            UJ Online Short Learning Programme
-                          </h3>
-                          <div class="course-price">₹399</div>
-                        </div>
-                      </div>
-
-                      <div class="course-card course-card--highlighted">
-                        <span class="registration-badge"
-                          >Registrations Open</span
-                        >
-                        <span class="duration-badge">Duration: 4h 59m</span>
-                        <div class="course-image">
-                          <img
-                            src="./assets/img/course1.svg"
-                            alt="UJ Online Course"
-                          />
-                        </div>
-                        <div class="d-flex justify-content-between">
-                          <h3 class="course-title text-start fw-normal">
-                            UJ Online Short Learning Programme
-                          </h3>
-                          <div class="course-price">₹399</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Mobile layout (single card) -->
-                    <div class="d-md-none">
-                      <div class="course-card course-card--highlighted">
-                        <span class="registration-badge"
-                          >Registrations Open</span
-                        >
-                        <span class="duration-badge">Duration: 4h 59m</span>
-                        <div class="course-image">
-                          <img
-                            src="./assets/img/course1.svg"
-                            alt="UJ Online Course"
-                          />
-                        </div>
-                        <div class="d-flex justify-content-between">
-                          <h3 class="course-title text-start fw-normal">
-                            UJ Online Short Learning Programme
-                          </h3>
-                          <div class="course-price">₹399</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Second Slide -->
-                  <div class="carousel-item">
-                    <!-- Wrapper div for desktop layout -->
-                    <div class="d-none d-md-flex justify-content-between">
-                      <div class="course-card course-card--highlighted">
-                        <span class="registration-badge"
-                          >Registrations Open</span
-                        >
-                        <span class="duration-badge">Duration: 4h 59m</span>
-                        <div class="course-image">
-                          <img
-                            src="./assets/img/course1.svg"
-                            alt="UJ Online Course"
-                          />
-                        </div>
-                        <div class="d-flex justify-content-between">
-                          <h3 class="course-title text-start fw-normal">
-                            UJ Online Short Learning Programme
-                          </h3>
-                          <div class="course-price">₹399</div>
-                        </div>
-                      </div>
-
-                      <div class="course-card course-card--highlighted">
-                        <span class="registration-badge"
-                          >Registrations Open</span
-                        >
-                        <span class="duration-badge">Duration: 4h 59m</span>
-                        <div class="course-image">
-                          <img
-                            src="./assets/img/course1.svg"
-                            alt="UJ Online Course"
-                          />
-                        </div>
-                        <div class="d-flex justify-content-between">
-                          <h3 class="course-title text-start fw-normal">
-                            UJ Online Short Learning Programme
-                          </h3>
-                          <div class="course-price">₹399</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Mobile layout (single card) -->
-                    <div class="d-md-none">
-                      <div class="course-card course-card--highlighted">
-                        <span class="registration-badge"
-                          >Registrations Open</span
-                        >
-                        <span class="duration-badge">Duration: 4h 59m</span>
-                        <div class="course-image">
-                          <img
-                            src="./assets/img/course1.svg"
-                            alt="UJ Online Course"
-                          />
-                        </div>
-                        <div class="d-flex justify-content-between">
-                          <h3 class="course-title text-start fw-normal">
-                            UJ Online Short Learning Programme
-                          </h3>
-                          <div class="course-price">₹399</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#coursesCarousel"
-                  data-bs-slide="prev"
-                >
-                  <img src="./assets/img/arrow-left.svg" height="32" alt="" />
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#coursesCarousel"
-                  data-bs-slide="next"
-                >
-                  <img src="./assets/img/arrow-right.svg" height="32" alt="" />
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Poll section -->
-        <div class="poll p-2">
-          <div class="container">
-            <div class="card-header">
-              <h5 class="m-0">Poll</h5>
-              <a href="#" class="view-all">
-                View all
-                <img src="./assets/img/viewall.svg" height="24px" alt="" />
-              </a>
-            </div>
-
-            <div class="main-wrapper">
-              <h6 class="text-start mb-4 pt-2">
-                Which account certifications do you hold in addition to being a
-                Chartered accountant?
-              </h6>
-              <div class="progress-wrapper">
-                <input
-                  type="radio"
-                  id="cma"
-                  name="certification"
-                  class="radio-input"
-                />
-                <div class="progress-container">
-                  <div class="progress-fill fill-cma"></div>
-                  <div class="text-container">
-                    <span class="progress-text"
-                      >Certified Management Accountant (CMA)</span
-                    >
-                    <span class="progress-percent">75%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="progress-wrapper">
-                <input
-                  type="radio"
-                  id="cpa"
-                  name="certification"
-                  class="radio-input"
-                />
-                <div class="progress-container">
-                  <div class="progress-fill fill-cpa"></div>
-                  <div class="text-container">
-                    <span class="progress-text"
-                      >Certified Public Accountant (CPA)</span
-                    >
-                    <span class="progress-percent">60%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="progress-wrapper">
-                <input
-                  type="radio"
-                  id="acca"
-                  name="certification"
-                  class="radio-input"
-                />
-                <div class="progress-container">
-                  <div class="progress-fill fill-acca"></div>
-                  <div class="text-container">
-                    <span class="progress-text"
-                      >Association of Chartered Certified Accountants
-                      (ACCA)</span
-                    >
-                    <span class="progress-percent">0%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="progress-wrapper">
-                <input
-                  type="radio"
-                  id="cia"
-                  name="certification"
-                  class="radio-input"
-                />
-                <div class="progress-container">
-                  <div class="progress-fill fill-cia"></div>
-                  <div class="text-container">
-                    <span class="progress-text"
-                      >Certified Internal Auditor (CIA)</span
-                    >
-                    <span class="progress-percent">40%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </section>
+      <!-- Poll section -->
+      <section class="poll">
+        <div
+        class="d-flex spacing justify-content-between align-items-center card-header"
+      >
+        <h4 class="header-title mb-0">Poll</h4>
+        <a href="#" class="shadow-link"><button>Explore More</button></a>
       </div>
+      <span
+        style="
+          border-bottom: 1px solid #82bf40;
+          display: block;
+          margin-top: 0px;
+          margin-bottom: 18px;
+          margin-left: 13px;
+          margin-right: 13px;
+          
+        "
+      ></span>
+
+      <div class="pb-3">
+        <div class="chart-container">
+            <canvas id="donutChart"></canvas>
+        </div>
     </div>
+      </section>
+    </main>
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script>
-      // Carousel Script start
-      const track = document.querySelector(".carousel-track");
-      const slides = Array.from(track.children);
-      const nextButton = document.querySelector(".next");
-      const prevButton = document.querySelector(".prev");
+        const ctx = document.getElementById('donutChart').getContext('2d');
+        
+        const data = {
+            labels: ['Certified Public Accountant (CPA)', 'Financial Analyst', 'Tax Specialist', 'Auditor'],
+            datasets: [{
+                data: [40, 47, 23, 20],
+                backgroundColor: [
+                    '#00BCD4',  // Turquoise
+                    '#FF9800',  // Orange
+                    '#9C27B0',  // Purple
+                    '#FF4081'   // Pink
+                ],
+                borderWidth: 0,
+                hoverOffset: 4
+            }]
+        };
 
-      let currentIndex = 0;
-      const slidesToShow = window.innerWidth <= 768 ? 1 : 3;
-      const slideWidth = 100 / slidesToShow;
+        const config = {
+            type: 'doughnut',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false 
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        },
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        cornerRadius: 6,
+                        titleFont: {
+                            size: 10,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 12
+                        }
+                    }
+                },
+                cutout: '60%',
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                onClick: (event, elements) => {
+                    if (elements && elements.length > 0) {
+                        const element = elements[0];
+                        const label = data.labels[element.index];
+                        const value = data.datasets[0].data[element.index];
+                        alert(`${label}: ${value}%`);
+                    }
+                }
+            }
+        };
 
-      // Set initial styles
-      slides.forEach((slide) => {
-        slide.style.flexBasis = `${slideWidth}%`;
-      });
-
-      // Update carousel position
-      const updateCarousel = () => {
-        const offset = -currentIndex * slideWidth;
-        track.style.transform = `translateX(${offset}%)`;
-
-        // Update button states
-        // prevButton.style.display = currentIndex === 0 ? "none" : "block";
-        // nextButton.style.display =
-        //   currentIndex >= slides.length - slidesToShow ? "none" : "block";
-      };
-
-      // Event listeners
-      nextButton.addEventListener("click", () => {
-        if (currentIndex < slides.length - slidesToShow) {
-          currentIndex++;
-          updateCarousel();
-        }
-      });
-
-      prevButton.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-        }
-      });
-
-      // Handle resize
-      window.addEventListener("resize", () => {
-        const newSlidesToShow = window.innerWidth <= 768 ? 1 : 3;
-        if (newSlidesToShow !== slidesToShow) {
-          location.reload();
-        }
-      });
-
-      // Initial setup
-      updateCarousel();
-      // Carousel Script end
-
-      // Poll Card Script
-
-      function updateProgressBars() {
-        const progressContainers = document.querySelectorAll(
-          ".progress-container"
-        );
-        progressContainers.forEach((container) => {
-          const progressFill = container.querySelector(".progress-fill");
-          const progressPercent = container.querySelector(".progress-percent");
-          // Get the percentage value from the span
-          const percentText = progressPercent.textContent;
-          const value = parseInt(percentText, 8);
-          // Get the background color of the fill
-          const fillElement = container.querySelector(".progress-fill");
-          const fillColor =
-            window.getComputedStyle(fillElement).backgroundColor;
-          // Convert rgba to rgb for border
-          const rgbColor = fillColor.replace(
-            /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/,
-            (_, r, g, b) => `rgb(${r}, ${g}, ${b})`
-          );
-          // Set the border color and width to match the fill
-          container.style.border = `1px solid ${rgbColor}`; // You can change 2px to 1px if preferred
-
-          if (value > 0) {
-            progressFill.style.width = `${value}%`;
-            progressFill.style.display = "block";
-          } else {
-            progressFill.style.width = "0%";
-            progressFill.style.display = "none";
-          }
-        });
-      }
-
-      // Rest of your JavaScript remains the same
-      document.addEventListener("DOMContentLoaded", updateProgressBars);
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (
-            mutation.type === "characterData" ||
-            mutation.type === "childList"
-          ) {
-            updateProgressBars();
-          }
-        });
-      });
-
-      document.querySelectorAll(".progress-percent").forEach((span) => {
-        observer.observe(span, {
-          characterData: true,
-          childList: true,
-          subtree: true,
-        });
-      });
+        new Chart(ctx, config);
     </script>
   </body>
 </html>
