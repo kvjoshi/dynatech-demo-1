@@ -136,6 +136,8 @@ table {
   --secondary: #1a99d5;
   --accent: #82bf40;
   --background: #f8f8f8;
+  --gray: #b9b9b9;
+  --gray-dark: #dfe1e9;
   --text-muted: #6c757d;
   background-color: var(--background);
   font-family: "Poppins", sans-serif;
@@ -192,14 +194,169 @@ nav ul li > a {
   border-radius: 4px;
   cursor: pointer;
 }
-.event img {
-  object-fit: cover;
+
+nav ul li:last-child > a {
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 4px;
+  padding: 4px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+main {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+section {
+  background-color: white;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px #0000004d;
+}
+
+.shadow-link {
+  position: relative;
+  display: inline-block;
+}
+
+.shadow-link button {
+  z-index: 1;
+  height: 100%;
+  color: white;
+  background: linear-gradient(270deg, #34a2d7 0%, #273368 100%);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+/* .shadow-link button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 90%;
+  background-color: var(--accent);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.shadow-link button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 4px;
+  height: 100%;
+  background-color: #283b70;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+} */
+
+/* Membership & Accoutn Style start */
+
+.membership {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.membership__card {
+  padding: 12px;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 24px;
+}
+
+.membership__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.membership__card__header h2 {
+  font-weight: 600;
+}
+
+.membership__card__body p {
+  margin-top: 18px;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.account__card {
+  margin-top: 22px;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.account__card__header {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account__card__header h2 {
+  font-weight: 600;
+}
+
+.account__card__body > div:first-child {
+  width: 250px;
+  background-color: var(--primary);
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 18%;
+}
+
+.account__card__body > div:last-child {
+  flex-grow: 1;
+  background-color: var(--gray-dark);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.account__card__body > div:last-child div {
+  padding-top: 2rem;
+  padding-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.news {
+  grid-column: 2 / 4;
+}
+
+/* Event style start */
 .event {
   display: flex;
   align-items: center;
+}
+
+.event img {
+  object-fit: cover;
+  border-radius: 4px;
 }
 .event-title {
   line-height: 24px;
@@ -236,8 +393,7 @@ nav ul li > a {
   padding: 0;
 }
 
-/* Popular course card style start */
-
+/* Course style start */
 .course-title {
   font-size: 12px;
   font-weight: 700;
@@ -257,37 +413,7 @@ nav ul li > a {
   font-weight: 700;
 }
 
-nav ul li:last-child > a {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 4px;
-  padding: 4px;
-  background-color: var(--primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* Event Item Styles */
-}
-
-main {
-  padding: 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-}
-
-section {
-  background-color: white;
-  padding: 12px;
-  border-radius: 4px;
-  box-shadow: 0px 1px 2px 0px #0000004d;
-}
-
-.news {
-  grid-column: 2 / 4;
-}
-
+/* Media Queries start */
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
