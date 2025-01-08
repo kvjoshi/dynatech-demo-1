@@ -195,7 +195,14 @@ nav ul li > a {
   cursor: pointer;
 }
 
-nav ul li:last-child > a {
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+nav > ul li:last-child > a {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 4px;
@@ -482,7 +489,13 @@ section {
 /*  */
 
 /* Media Queries start */
+
 @media (max-width: 768px) {
+  nav > ul {
+    display: none;
+    background-color: red;
+  }
+
   main {
     grid-template-columns: 1fr;
   }
