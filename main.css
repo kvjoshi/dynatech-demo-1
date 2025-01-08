@@ -690,10 +690,27 @@ section {
 }
 
 /* Media Queries start */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-@media (max-width: 425px) {
+  .courses {
+    grid-row: 2;
+  }
+
+  .communities {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
   .news {
-    max-width: 400px;
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+
+  .poll {
+    grid-row: 2;
   }
 }
 
@@ -738,5 +755,11 @@ section {
 
   .poll {
     grid-row: 5;
+  }
+}
+
+@media (max-width: 425px) {
+  .news {
+    max-width: 400px;
   }
 }
