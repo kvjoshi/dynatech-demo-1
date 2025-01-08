@@ -386,6 +386,14 @@ section {
 }
 
 /* Event style start */
+
+.events {
+  padding: 0;
+}
+
+.spacing {
+  padding: 12px;
+}
 .event {
   display: flex;
   align-items: center;
@@ -436,6 +444,11 @@ section {
 }
 
 /* Course style start */
+
+.courses {
+  padding: 0;
+}
+
 .course-title {
   font-size: 12px;
   font-weight: 700;
