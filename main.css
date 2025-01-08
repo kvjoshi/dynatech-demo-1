@@ -214,7 +214,7 @@ nav > ul li:last-child > a {
 }
 
 .dashboard-container {
-  padding: 50px;
+  padding: 50px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
