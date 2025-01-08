@@ -201,6 +201,17 @@ nav ul li > a {
   display: flex;
   align-items: center;
 }
+.event-title {
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.event-timestamp {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a6a6a6;
+  line-height: 16px;
+}
 
 .event span {
   display: block;
