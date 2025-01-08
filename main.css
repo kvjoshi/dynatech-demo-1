@@ -213,7 +213,7 @@ nav > ul li:last-child > a {
   align-items: center;
 }
 
-main {
+.dashboard-container {
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -706,7 +706,7 @@ section {
     display: none;
   }
 
-  main {
+  .dashboard-container {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
