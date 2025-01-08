@@ -135,8 +135,16 @@ table {
   --secondary: #1a99d5;
   --accent: #82bf40;
   --background: #f8f8f8;
-  background-color: var(--background);
   font-size: 16px;
+}
+
+body {
+  background-color: var(--background);
+}
+
+header {
+  background-color: white;
+  box-shadow: 0px 1px 4px 0px #00000040;
 }
 
 nav {
@@ -178,4 +186,32 @@ nav ul li:last-child > a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+section {
+  background-color: white;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px #0000004d;
+}
+
+.news {
+  grid-column: 2 / 4;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .news {
+    grid-column: 1 / 2;
+  }
 }
