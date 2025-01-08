@@ -260,7 +260,100 @@
       <!-- News & Article section -->
       <section class="news">News & Articles</section>
       <!-- Poll section -->
-      <section class="poll">Poll</section>
+      <section class="poll">
+        <div
+        class="d-flex spacing justify-content-between align-items-center card-header"
+      >
+        <h4 class="header-title mb-0">Poll</h4>
+        <a href="#" class="shadow-link"><button>Explore More</button></a>
+      </div>
+      <span
+        style="
+          border-bottom: 1px solid #82bf40;
+          display: block;
+          margin-top: 0px;
+          margin-bottom: 18px;
+          margin-left: 13px;
+          margin-right: 13px;
+          
+        "
+      ></span>
+
+      <div class="pb-3">
+        <div class="chart-container">
+            <canvas id="donutChart"></canvas>
+        </div>
+    </div>
+      </section>
     </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        const ctx = document.getElementById('donutChart').getContext('2d');
+        
+        const data = {
+            labels: ['Certified Public Accountant (CPA)', 'Financial Analyst', 'Tax Specialist', 'Auditor'],
+            datasets: [{
+                data: [40, 47, 23, 20],
+                backgroundColor: [
+                    '#00BCD4',  // Turquoise
+                    '#FF9800',  // Orange
+                    '#9C27B0',  // Purple
+                    '#FF4081'   // Pink
+                ],
+                borderWidth: 0,
+                hoverOffset: 4
+            }]
+        };
+
+        const config = {
+            type: 'doughnut',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false 
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        },
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        cornerRadius: 6,
+                        titleFont: {
+                            size: 10,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 12
+                        }
+                    }
+                },
+                cutout: '60%',
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                onClick: (event, elements) => {
+                    if (elements && elements.length > 0) {
+                        const element = elements[0];
+                        const label = data.labels[element.index];
+                        const value = data.datasets[0].data[element.index];
+                        alert(`${label}: ${value}%`);
+                    }
+                }
+            }
+        };
+
+        new Chart(ctx, config);
+    </script>
   </body>
 </html>

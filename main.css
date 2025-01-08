@@ -507,11 +507,10 @@ section {
   padding: 0;
 }
 
-/* Container for Rounded Images */
 .rounded-image-container {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap onto new lines on small screens */
-  gap: 16px; /* Spacing between items */
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: center; /* Centers items horizontally */
 }
 
@@ -564,6 +563,32 @@ section {
   .rounded-image-container {
     gap: 12px; /* Reduce spacing between items */
   }
+}
+
+/* Community styling ends here */
+
+/* Poll Card  */
+
+.poll {
+  padding: 0;
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+#chartjs-tooltip {
+  opacity: 1;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+  pointer-events: none;
+  transform: translate(-50%, 0);
 }
 
 /* Media Queries start */
