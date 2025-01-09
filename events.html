@@ -40,7 +40,7 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
+    <main class="container events-container">
       <!-- Event Filters section -->
       <section class="event-list">
         <div class="d-flex spacing justify-content-between align-items-center">
@@ -56,7 +56,7 @@
             margin-right: 13px;
           "
         ></span>
-        <div class="event-list-card-header">Type of Live Event</div>
+        <div class="event-list-card-header">Event Type</div>
 
         <div class="event-list-card-body">
           <div class="event-list-card-body-item">
@@ -103,126 +103,26 @@
           "
         ></span>
 
-        <div class="event-list-card-header">Months</div>
+        <div class="event-list-card-header">Event Status</div>
 
         <div class="event-list-card-body">
           <div class="event-list-card-body-item">
-            <label for="january">January</label>
+            <label for="live">Live</label>
             <input
               type="checkbox"
-              id="january"
-              name="january"
-              value="january"
+              id="live"
+              name="live"
+              value="live"
               class="event-filter-checkbox"
             />
           </div>
           <div class="event-list-card-body-item">
-            <label for="february">February</label>
+            <label for="february">Offline</label>
             <input
               type="checkbox"
               id="february"
               name="february"
               value="february"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="march">March</label>
-            <input
-              type="checkbox"
-              id="march"
-              name="march"
-              value="march"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="april">April</label>
-            <input
-              type="checkbox"
-              id="april"
-              name="april"
-              value="april"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="may">May</label>
-            <input
-              type="checkbox"
-              id="may"
-              name="may"
-              value="may"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="june">June</label>
-            <input
-              type="checkbox"
-              id="june"
-              name="june"
-              value="june"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="july">July</label>
-            <input
-              type="checkbox"
-              id="july"
-              name="july"
-              value="july"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="august">August</label>
-            <input
-              type="checkbox"
-              id="august"
-              name="august"
-              value="august"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="september">September</label>
-            <input
-              type="checkbox"
-              id="september"
-              name="september"
-              value="september"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="october">October</label>
-            <input
-              type="checkbox"
-              id="october"
-              name="october"
-              value="october"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="november">November</label>
-            <input
-              type="checkbox"
-              id="november"
-              name="november"
-              value="november"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="december">December</label>
-            <input
-              type="checkbox"
-              id="december"
-              name="december"
-              value="december"
               class="event-filter-checkbox"
             />
           </div>
@@ -237,10 +137,60 @@
             margin-right: 13px;
           "
         ></span>
+
+        <div class="event-list-card-header">Event Date</div>
+
+        <div class="event-list-card-body">
+          <div class="event-list-card-datepicker">
+            <div class="input-group">
+              <input
+                type="date"
+                id="event-datepicker"
+                name="event-datepicker"
+                value=""
+                class="event-filter form-control"
+                onchange="updateDateLabel()"
+              />
+            </div>
+          </div>
+          <script>
+            function updateDateLabel() {
+              const datepicker = document.getElementById("event-datepicker");
+              const label = document.getElementById("datepicker-label");
+              label.textContent = datepicker.value
+                ? datepicker.value
+                : "Select Date";
+            }
+          </script>
+        </div>
+        <span
+          style="
+            border-bottom: 1px solid #82bf40;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 18px;
+            margin-left: 13px;
+            margin-right: 13px;
+          "
+        ></span>
       </section>
 
-      <!-- News & Article section -->
-      <section class="news">News & Articles</section>
+      <!-- Events list cards section -->
+      <section class="event-list">
+        <div class="spacing d-flex justify-content-between align-items-center">
+          <h4 class="header-title mb-0">Events</h4>
+        </div>
+        <span
+          style="
+            border-bottom: 1px solid #82bf40;
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 18px;
+            margin-left: 13px;
+            margin-right: 13px;
+          "
+        ></span>
+      </section>
       <!-- Poll section -->
     </main>
   </body>

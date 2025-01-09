@@ -220,6 +220,13 @@ nav > ul li:last-child > a {
   gap: 30px;
 }
 
+.events-container {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 30px;
+}
+
 section {
   background-color: white;
   padding: 12px;
@@ -676,12 +683,29 @@ section {
   line-height: 18px;
 }
 
+.event-list-card-datepicker {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 13px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #273368;
+  accent-color: #273368;
+}
+
 .event-filter-checkbox {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  accent-color: #273368;
+  accent-color: #abb5be;
 }
+
+.event-filter-datepicker {
+  accent-color: #273368;
+  height: 18px;
+  width: 18px;
+}
+
 /* Event page styling end */
 
 /* Communities page styling start */
@@ -691,7 +715,8 @@ section {
 
 /* Media Queries start */
 @media (max-width: 1024px) {
-  .dashboard-container {
+  .dashboard-container,
+  .events-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -723,7 +748,8 @@ section {
     display: none;
   }
 
-  .dashboard-container {
+  .dashboard-container,
+  .events-container {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
