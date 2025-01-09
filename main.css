@@ -713,7 +713,6 @@ section {
 }
 
 .event-filter-datepicker {
-  background: url("assets/img/datepicker_icon.svg") no-repeat right;
   accent-color: #273368;
   height: 16px;
   width: 16px;
