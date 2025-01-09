@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,13 +22,22 @@
   </head>
   <body>
     <header>
-      <nav class="container d-flex justify-content-between align-items-center">
-        <div class="h-100 d-flex justify-content-between align-items-center">
+      <nav
+        class="container d-flex justify-content-between align-items-center px-4 p-lg-0"
+      >
+        <div class="h-100 d-flex gap-2 align-items-center">
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <img src="assets/img/jam_menu.svg" alt="" width="20" />
+          </button>
           <img src="assets/img/dynatech-logo-darkbg 1.png" width="350" alt="" />
         </div>
-        <ul
-          class="h-100"
-        >
+        <ul class="h-100">
           <li class="nav__item--active"><a href="#">Home</a></li>
           <li><a href="#">Communities</a></li>
           <li><a href="./events.html">Events</a></li>
@@ -38,8 +50,45 @@
           </li>
         </ul>
       </nav>
+      <!-- Mobile sidebar -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header border">
+          <img src="assets/img/dynatech-logo-darkbg 1.png" alt="" width="250" />
+          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5> -->
+          <!-- <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button> -->
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+            <li class="nav-item">
+              <a class="nav-link px-3 sidenav-active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Communities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">News & Articles</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <main class="container dashboard-container">
+    <main class="container dashboard-container px-lg-0">
       <!-- Membership section -->
       <section class="membership">
         <div class="membership__card">
@@ -76,7 +125,7 @@
                 <span>Credit</span>
               </div>
               <div>
-                <img src="assets/img/statement_icon.svg" width="25"alt="" />
+                <img src="assets/img/statement_icon.svg" width="25" alt="" />
                 <span>Statement</span>
               </div>
             </div>
@@ -86,7 +135,7 @@
       <!-- Events section -->
       <section class="events">
         <div
-          class=" card-header spacing d-flex justify-content-between align-items-center"
+          class="card-header spacing d-flex justify-content-between align-items-center"
         >
           <h4 class="header-title mb-0">Events</h4>
           <a href="#" class="shadow-link"><button>View All</button></a>
@@ -99,11 +148,12 @@
             margin-bottom: 18px;
             margin-left: 13px;
             margin-right: 13px;
-            
           "
         ></span>
         <div class="card-body">
-          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+          <div
+            class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3"
+          >
             <img
               src="./assets/img/event1.svg"
               width="90"
@@ -118,7 +168,9 @@
               <span class="event-timestamp">4 min read</span>
             </div>
           </div>
-          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+          <div
+            class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3"
+          >
             <img
               src="./assets/img/event1.svg"
               width="90"
@@ -126,7 +178,7 @@
               class="img-fluid rounded"
               alt="Event Image"
             />
-            <div class="ms-3 ">
+            <div class="ms-3">
               <span class="d-block event-title">
                 SAICA Limpopo District: Ethics for Trainees session
               </span>
@@ -157,7 +209,6 @@
         >
           <h4 class="header-title mb-0">Popular Courses</h4>
           <a href="#" class="shadow-link"><button>View All</button></a>
-
         </div>
         <span
           style="
@@ -167,15 +218,20 @@
             margin-bottom: 18px;
             margin-left: 13px;
             margin-right: 13px;
-            
           "
         ></span>
         <div class="">
-          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+          <div
+            class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3"
+          >
             <div class="square-image">
-              <img src="https://placehold.co/90x70/DFE1E9/png" class="img-fluid rounded" alt="Example Image" />
+              <img
+                src="https://placehold.co/90x70/DFE1E9/png"
+                class="img-fluid rounded"
+                alt="Example Image"
+              />
               <div class="overlay-text">WITS</div>
-            </div>          
+            </div>
             <div class="ms-3">
               <span class="course-title d-block">
                 WITS online CVO programme
@@ -184,9 +240,15 @@
               <span class="course-duration">Duration : 10 weeks</span>
             </div>
           </div>
-          <div class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3">
+          <div
+            class="event d-flex align-items-center mb-3 border-bottom ps-3 pb-3"
+          >
             <div class="square-image">
-              <img src="https://placehold.co/90x70/DFE1E9/png" class="img-fluid rounded" alt="Example Image" />
+              <img
+                src="https://placehold.co/90x70/DFE1E9/png"
+                class="img-fluid rounded"
+                alt="Example Image"
+              />
               <div class="overlay-text">UJ</div>
             </div>
             <div class="ms-3">
@@ -199,7 +261,11 @@
           </div>
           <div class="event d-flex align-items-center ps-3 pb-3">
             <div class="square-image">
-              <img src="https://placehold.co/90x70/DFE1E9/png" class="img-fluid rounded" alt="Example Image" />
+              <img
+                src="https://placehold.co/90x70/DFE1E9/png"
+                class="img-fluid rounded"
+                alt="Example Image"
+              />
               <div class="overlay-text">UJ</div>
             </div>
             <div class="ms-3">
@@ -209,7 +275,6 @@
               <span class="course-availability">Applications are open</span>
               <span class="course-duration">Duration : 10 weeks</span>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -229,16 +294,15 @@
             margin-bottom: 18px;
             margin-left: 13px;
             margin-right: 13px;
-            
           "
         ></span>
-        
+
         <div class="d-flex justify-content-around p-2">
           <div class="rounded-image">
             <img src="/assets/img/com-img-1.png" alt="Example Image" />
             <div class="community-overlay-text">AGA</div>
           </div>
-          
+
           <div class="rounded-image">
             <img src="/assets/img/com-img-2.png" alt="Example Image" />
             <div class="community-overlay-text">ATSA</div>
@@ -251,9 +315,6 @@
             <img src="/assets/img/com-img-4.png" alt="Example Image" />
             <div class="community-overlay-text">GASA</div>
           </div>
-          
-        </div>
-
         </div>
       </section>
       <!-- News & Article section -->
@@ -264,10 +325,13 @@
         </div>
         <div class="news__card__body">
           <div class="article__card">
-            <img src="https://placehold.co/191x166" alt="">
+            <img src="https://placehold.co/191x166" alt="" />
             <div class="article__card__content">
               <h2>Article Name</h2>
-              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <p>
+                Many desktop publishing packages and web page editors now use
+                Lorem Ipsum
+              </p>
               <div>
                 <span>10/01/2025</span>
                 <a href="" class="shadow-link">
@@ -277,10 +341,13 @@
             </div>
           </div>
           <div class="article__card">
-            <img src="https://placehold.co/191x166" alt="">
+            <img src="https://placehold.co/191x166" alt="" />
             <div class="article__card__content">
               <h2>Article Name</h2>
-              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <p>
+                Many desktop publishing packages and web page editors now use
+                Lorem Ipsum
+              </p>
               <div>
                 <span>10/01/2025</span>
                 <a href="" class="shadow-link">
@@ -290,10 +357,13 @@
             </div>
           </div>
           <div class="article__card">
-            <img src="https://placehold.co/191x166" alt="">
+            <img src="https://placehold.co/191x166" alt="" />
             <div class="article__card__content">
               <h2>Article Name</h2>
-              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <p>
+                Many desktop publishing packages and web page editors now use
+                Lorem Ipsum
+              </p>
               <div>
                 <span>10/01/2025</span>
                 <a href="" class="shadow-link">
@@ -303,10 +373,13 @@
             </div>
           </div>
           <div class="article__card">
-            <img src="https://placehold.co/191x166" alt="">
+            <img src="https://placehold.co/191x166" alt="" />
             <div class="article__card__content">
               <h2>Article Name</h2>
-              <p>Many desktop publishing packages and web page editors now use Lorem Ipsum</p>
+              <p>
+                Many desktop publishing packages and web page editors now use
+                Lorem Ipsum
+              </p>
               <div>
                 <span>10/01/2025</span>
                 <a href="" class="shadow-link">
@@ -316,103 +389,106 @@
             </div>
           </div>
         </div>
-
       </section>
       <!-- Poll section -->
       <section class="poll">
         <div
-        class="d-flex spacing justify-content-between align-items-center card-header"
-      >
-        <h4 class="header-title mb-0">Poll</h4>
-        <a href="#" class="shadow-link"><button>Explore More</button></a>
-      </div>
-      <span
-        style="
-          border-bottom: 1px solid #82bf40;
-          display: block;
-          margin-top: 0px;
-          margin-bottom: 18px;
-          margin-left: 13px;
-          margin-right: 13px;
-          
-        "
-      ></span>
-
-      <div class="pb-3">
-        <div class="chart-container">
-            <canvas id="donutChart"></canvas>
+          class="d-flex spacing justify-content-between align-items-center card-header"
+        >
+          <h4 class="header-title mb-0">Poll</h4>
+          <a href="#" class="shadow-link"><button>Explore More</button></a>
         </div>
-    </div>
+        <span
+          style="
+            border-bottom: 1px solid #82bf40;
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 18px;
+            margin-left: 13px;
+            margin-right: 13px;
+          "
+        ></span>
+
+        <div class="pb-3">
+          <div class="chart-container">
+            <canvas id="donutChart"></canvas>
+          </div>
+        </div>
       </section>
     </main>
 
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script>
-        const ctx = document.getElementById('donutChart').getContext('2d');
-        
-        const data = {
-            labels: ['Certified Public Accountant (CPA)', 'Financial Analyst', 'Tax Specialist', 'Auditor'],
-            datasets: [{
-                data: [40, 47, 23, 20],
-                backgroundColor: [
-                    '#00BCD4',  // Turquoise
-                    '#FF9800',  // Orange
-                    '#9C27B0',  // Purple
-                    '#FF4081'   // Pink
-                ],
-                borderWidth: 0,
-                hoverOffset: 4
-            }]
-        };
+      const ctx = document.getElementById("donutChart").getContext("2d");
 
-        const config = {
-            type: 'doughnut',
-            data: data,
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: {
-                        display: false 
-                    },
-                    tooltip: {
-                        enabled: true,
-                        callbacks: {
-                            label: function(context) {
-                                return `${context.label}: ${context.raw}%`;
-                            }
-                        },
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        cornerRadius: 6,
-                        titleFont: {
-                            size: 10,
-                            weight: 'bold'
-                        },
-                        bodyFont: {
-                            size: 12
-                        }
-                    }
+      const data = {
+        labels: [
+          "Certified Public Accountant (CPA)",
+          "Financial Analyst",
+          "Tax Specialist",
+          "Auditor",
+        ],
+        datasets: [
+          {
+            data: [40, 47, 23, 20],
+            backgroundColor: [
+              "#00BCD4", // Turquoise
+              "#FF9800", // Orange
+              "#9C27B0", // Purple
+              "#FF4081", // Pink
+            ],
+            borderWidth: 0,
+            hoverOffset: 4,
+          },
+        ],
+      };
+
+      const config = {
+        type: "doughnut",
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: true,
+              callbacks: {
+                label: function (context) {
+                  return `${context.label}: ${context.raw}%`;
                 },
-                cutout: '60%',
-                animation: {
-                    animateScale: true,
-                    animateRotate: true
-                },
-                onClick: (event, elements) => {
-                    if (elements && elements.length > 0) {
-                        const element = elements[0];
-                        const label = data.labels[element.index];
-                        const value = data.datasets[0].data[element.index];
-                        alert(`${label}: ${value}%`);
-                    }
-                }
+              },
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+              padding: 12,
+              cornerRadius: 6,
+              titleFont: {
+                size: 10,
+                weight: "bold",
+              },
+              bodyFont: {
+                size: 12,
+              },
+            },
+          },
+          cutout: "60%",
+          animation: {
+            animateScale: true,
+            animateRotate: true,
+          },
+          onClick: (event, elements) => {
+            if (elements && elements.length > 0) {
+              const element = elements[0];
+              const label = data.labels[element.index];
+              const value = data.datasets[0].data[element.index];
+              alert(`${label}: ${value}%`);
             }
-        };
+          },
+        },
+      };
 
-        new Chart(ctx, config);
+      new Chart(ctx, config);
     </script>
   </body>
 </html>
