@@ -130,6 +130,11 @@ table {
   border-spacing: 0;
 }
 
+video {
+  height: auto;
+  max-width: 100%;
+}
+
 /* Variables */
 :root {
   --primary: #273368;
@@ -775,6 +780,133 @@ section {
   font-weight: 700;
   color: #98a4b5;
   margin: 0.5rem 0 0.7rem;
+}
+
+/* Course detail page style start */
+
+.course-card-header {
+  display: flex;
+  border: none;
+  border-bottom: 3px solid #0000001a;
+  position: relative;
+}
+
+.course-card-header::before {
+  content: "";
+  height: 3rem;
+}
+
+.course-card-header-tab-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.course-card-header button {
+  font-weight: 500;
+  border: none;
+  background-color: white;
+  padding: 1rem 1.5rem;
+}
+
+.selected-tab {
+  color: white;
+  background-color: var(--primary) !important;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 1rem;
+  border-bottom: 3px solid var(--accent) !important;
+}
+
+.tab-panel[data-tab-id="details"] {
+  padding: 6px;
+}
+
+.tab-panel[data-tab-id="summary"] {
+  padding: 10px;
+  background-color: lightblue;
+}
+
+.tab-panel[data-tab-id="duration"] {
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+.details-card-header {
+  position: relative;
+}
+
+.details-card-header a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.details-card-header button {
+  color: white;
+  background-color: var(--primary);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  border-right: 3px solid var(--accent);
+  box-shadow: 0px 4px 4px 0px #0000004d;
+  box-shadow: 0px 8px 12px 6px #00000026;
+}
+
+.details-card-body p {
+  font-weight: 400;
+  color: #676768;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+
+.details-card-body > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-card-body .instructor h4 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.instructor-card {
+  position: relative;
+}
+
+.instructor-img {
+  border: 4px solid var(--accent);
+}
+
+.instructor-name {
+  background-color: #ecffd8;
+  max-width: 200px;
+  height: 64px;
+  border-top-left-radius: 78px;
+  border-top-right-radius: 78px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.instructor-name {
+  position: relative;
+}
+
+.instructor-name h5 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 20%;
+  right: 20%;
 }
 
 /* Media Queries start */
