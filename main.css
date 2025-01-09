@@ -688,13 +688,6 @@ section {
   padding: 0;
 }
 
-.events-container {
-  padding: 50px 0;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 30px;
-}
-
 .event-list-card-datepicker {
   display: flex;
   justify-content: space-between;
@@ -705,36 +698,39 @@ section {
   accent-color: #273368;
 }
 
-.event-list-card-header {
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 18px;
-  margin-left: 5px;
-  margin-top: 0;
-  padding: 0px 8px;
-}
-
-.event-list-card-body-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 13px;
+.event-card-text {
   font-size: 10px;
   font-weight: 400;
+  color: #676768;
   line-height: 18px;
+  margin-bottom: 10px;
 }
 
-.event-filter-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  accent-color: #273368;
+.event-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #121212;
+  line-height: 24px;
 }
 
 .event-filter-datepicker {
+  background: url("assets/img/datepicker_icon.svg") no-repeat right;
   accent-color: #273368;
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
+  outline: none;
+  color: #abb5be;
+  font-size: 10px;
+  width: 100%;
+  accent-color: #273368;
+  border: 1px solid #7676801f;
 }
+
+.event-duration {
+  font-size: 10px;
+  color: #9898988c;
+}
+
 /* Event page styling end */
 
 /* Communities page styling start */
@@ -785,8 +781,7 @@ section {
 
 /* Media Queries start */
 @media (max-width: 1024px) {
-  .dashboard-container,
-  .events-container {
+  .dashboard-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -823,8 +818,7 @@ section {
     display: none;
   }
 
-  .dashboard-container,
-  .events-container {
+  .dashboard-container {
     grid-template-columns: 1fr;
     padding: 1rem;
   }

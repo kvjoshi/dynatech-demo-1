@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Courses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,15 +22,28 @@
   </head>
   <body>
     <header>
-      <nav class="container d-flex justify-content-between align-items-center">
-        <div class="h-100 d-flex justify-content-between align-items-center">
+      <nav
+        class="container d-flex justify-content-between align-items-center px-4 p-lg-0"
+      >
+        <div class="h-100 d-flex gap-2 align-items-center">
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <img src="assets/img/jam_menu.svg" alt="" width="20" />
+          </button>
           <img src="assets/img/dynatech-logo-darkbg 1.png" width="350" alt="" />
         </div>
         <ul class="h-100">
-          <li><a href="./dashboard.html">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">Communities</a></li>
           <li class="nav__item--active"><a href="./events.html">Events</a></li>
-          <li><a href="./courses.html">Courses</a></li>
+          <li>
+            <a href="./courses.html">Courses</a>
+          </li>
           <li><a href="./news-article.html">News & Articles</a></li>
           <li>
             <a href="#">
@@ -39,159 +52,260 @@
           </li>
         </ul>
       </nav>
+      <!-- Mobile sidebar -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header border">
+          <img src="assets/img/dynatech-logo-darkbg 1.png" alt="" width="250" />
+          <!-- <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button> -->
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="dashboard.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="communities.html">Communities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 sidenav-active" href="courses.html"
+                >Courses</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="news-article.html"
+                >News & Articles</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <main class="container events-container">
-      <!-- Event Filters section -->
-      <section class="event-list">
-        <div class="d-flex spacing justify-content-between align-items-center">
-          <h4 class="header-title mb-0">Filter</h4>
-        </div>
-        <span
-          style="
-            border-bottom: 1px solid #82bf40;
-            display: block;
-            margin-top: 0px;
-            margin-bottom: 18px;
-            margin-left: 13px;
-            margin-right: 13px;
-          "
-        ></span>
-        <div class="event-list-card-header">Event Type</div>
-
-        <div class="event-list-card-body">
-          <div class="event-list-card-body-item">
-            <label for="webinar">Webinar</label>
-            <input
-              type="checkbox"
-              id="webinar"
-              name="webinar"
-              value="webinar"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="in-person">In Person</label>
-
-            <input
-              type="checkbox"
-              id="in-person"
-              name="in-person"
-              value="in-person"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="hybrid">Hybrid</label>
-
-            <input
-              type="checkbox"
-              id="hybrid"
-              name="hybrid"
-              value="hybrid"
-              class="event-filter-checkbox"
-            />
-          </div>
-        </div>
-        <span
-          style="
-            border-bottom: 1px solid #00000040;
-            display: block;
-            margin-top: 13px;
-            margin-bottom: 18px;
-            margin-left: 13px;
-            margin-right: 13px;
-          "
-        ></span>
-
-        <div class="event-list-card-header">Event Status</div>
-
-        <div class="event-list-card-body">
-          <div class="event-list-card-body-item">
-            <label for="live">Live</label>
-            <input
-              type="checkbox"
-              id="live"
-              name="live"
-              value="live"
-              class="event-filter-checkbox"
-            />
-          </div>
-          <div class="event-list-card-body-item">
-            <label for="february">Offline</label>
-            <input
-              type="checkbox"
-              id="february"
-              name="february"
-              value="february"
-              class="event-filter-checkbox"
-            />
-          </div>
-        </div>
-        <span
-          style="
-            border-bottom: 1px solid #82bf40;
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 18px;
-            margin-left: 13px;
-            margin-right: 13px;
-          "
-        ></span>
-
-        <div class="event-list-card-header">Event Date</div>
-
-        <div class="event-list-card-body">
-          <div class="event-list-card-datepicker">
-            <div class="input-group">
-              <input
-                type="date"
-                id="event-datepicker"
-                name="event-datepicker"
-                value=""
-                class="event-filter form-control"
-                onchange="updateDateLabel()"
-              />
+    <main class="container my-5">
+      <div class="row gap-4">
+        <div
+          class="col-md-3 col-xl-2 bg-white p-3 filter-container shadow rounded"
+          style="max-height: max-content"
+        >
+          <h5 class="fs-5">Filter</h5>
+          <div class="mt-3">
+            <h6>Event Type</h6>
+            <div class="d-flex flex-column gap-2 mt-3">
+              <div class="checkbox-container">
+                <label for="webcast">Web Cast</label>
+                <input type="checkbox" id="webcast" />
+              </div>
+              <div class="checkbox-container">
+                <label for="inperson">In Person</label>
+                <input type="checkbox" id="inperson" />
+              </div>
+              <div class="checkbox-container">
+                <label for="hybrid">Hybrid</label>
+                <input type="checkbox" id="hybrid" />
+              </div>
             </div>
           </div>
-          <script>
-            function updateDateLabel() {
-              const datepicker = document.getElementById("event-datepicker");
-              const label = document.getElementById("datepicker-label");
-              label.textContent = datepicker.value
-                ? datepicker.value
-                : "Select Date";
-            }
-          </script>
-        </div>
-        <span
-          style="
-            border-bottom: 1px solid #82bf40;
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 18px;
-            margin-left: 13px;
-            margin-right: 13px;
-          "
-        ></span>
-      </section>
+          <div class="mt-3">
+            <h6>Event Status</h6>
+            <div class="d-flex flex-column gap-2 mt-3">
+              <div class="checkbox-container">
+                <label for="live">Live</label>
+                <input type="checkbox" id="live" />
+              </div>
+              <div class="checkbox-container">
+                <label for="offline">Offline</label>
+                <input type="checkbox" id="offline" />
+              </div>
+            </div>
+          </div>
 
-      <!-- Events list cards section -->
-      <section class="event-list">
-        <div class="spacing d-flex justify-content-between align-items-center">
-          <h4 class="header-title mb-0">Events</h4>
+          <div class="mt-3">
+            <h6>Event Date</h6>
+            <div class="d-flex flex-column gap-2 mt-3">
+              <div class="checkbox-container">
+                <input
+                  class="p-2"
+                  type="date"
+                  id="short"
+                  style="
+                    outline: none;
+                    color: #abb5be;
+                    font-size: 10px;
+                    width: 100%;
+                    accent-color: #273368;
+                    border: 1px solid #7676801f;
+                    border-radius: 4px;
+                    background: url('assets/img/datepicker_icon.svg') no-repeat
+                      right;
+                  "
+                  placeholder="Select Date"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <span
-          style="
-            border-bottom: 1px solid #82bf40;
-            display: block;
-            margin-top: 0px;
-            margin-bottom: 18px;
-            margin-left: 13px;
-            margin-right: 13px;
-          "
-        ></span>
-      </section>
-      <!-- Poll section -->
+        <div class="col course-section bg-white shadow rounded">
+          <h5 class="fs-5">Events</h5>
+          <div class="course-container py-4">
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card p-1">
+              <img
+                src="https://placehold.co/150x150"
+                class="img fluid"
+                alt=""
+              />
+              <div class="card-body py-2 px-2 text-start">
+                <h4 class="event-card-title py-2">Event Name</h4>
+                <p class="event-card-text">
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="event-duration">10/01/2024</p>
+                  <a href="#" class="shadow-link"><button>See More</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
