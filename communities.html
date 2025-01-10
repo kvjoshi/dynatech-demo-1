@@ -22,18 +22,31 @@
   </head>
   <body>
     <header>
-      <nav class="container d-flex justify-content-between align-items-center">
-        <div class="h-100 d-flex justify-content-between align-items-center">
+      <nav
+        class="container d-flex justify-content-between align-items-center px-4 p-lg-0"
+      >
+        <div class="h-100 d-flex gap-2 align-items-center">
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <img src="assets/img/jam_menu.svg" alt="" width="20" />
+          </button>
           <img src="assets/img/dynatech-logo-darkbg 1.png" width="350" alt="" />
         </div>
         <ul class="h-100">
-          <li><a href="./dashboard.html">Home</a></li>
-          <li><a href="#">Communities</a></li>
-          <li><a href="./events.html">Events</a></li>
+          <li><a href="dashboard.html">Home</a></li>
           <li class="nav__item--active">
-            <a href="./courses.html">Courses</a>
+            <a href="communities.html">Communities</a>
           </li>
-          <li><a href="./news-article.html">News & Articles</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li>
+            <a href="courses.html">Courses</a>
+          </li>
+          <li><a href="news-article.html">News & Articles</a></li>
           <li>
             <a href="#">
               <img src="assets/img/user-round.svg" alt="" width="16" />
@@ -41,6 +54,46 @@
           </li>
         </ul>
       </nav>
+      <!-- Mobile sidebar -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header border">
+          <img src="assets/img/dynatech-logo-darkbg 1.png" alt="" width="250" />
+          <!-- <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button> -->
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="dashboard.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 sidenav-active" href="communities.html"
+                >Communities</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="news-article.html"
+                >News & Articles</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <div class="p-5">
