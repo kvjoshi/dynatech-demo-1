@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="course-registration.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="container d-flex justify-content-between align-items-center px-4 p-lg-0"
+      >
+        <div class="h-100 d-flex gap-2 align-items-center">
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <img src="assets/img/jam_menu.svg" alt="" width="20" />
+          </button>
+          <img src="assets/img/dynatech-logo-darkbg 1.png" width="350" alt="" />
+        </div>
+        <ul class="h-100">
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="communities.html">Communities</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li class="nav__item--active">
+            <a href="courses.html">Courses</a>
+          </li>
+          <li><a href="news-article.html">News & Articles</a></li>
+          <li>
+            <a href="account.html">
+              <img src="assets/img/user-round.svg" alt="" width="16" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Mobile sidebar -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header border">
+          <img src="assets/img/dynatech-logo-darkbg 1.png" alt="" width="250" />
+          <!-- <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button> -->
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="dashboard.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="communities.html">Communities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 sidenav-active" href="courses.html"
+                >Courses</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="news-article.html"
+                >News & Articles</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="container my-md-3 p-3 p-md-0">
+      <ol class="breadcrumb my-3" style="--bs-breadcrumb-divider: '>'">
+        <li class="breadcrumb-item">
+          <a href="courses.html">Courses</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="course-detail.html">Course Details</a>
+        </li>
+        <li class="breadcrumb-item active">Registration</li>
+      </ol>
+      <div class="bg-white py-5">
+        <h4 class="text-center mb-2">Registration</h4>
+        <p class="text-center text-muted small mb-4">
+          Fill out the form carefully for registration
+        </p>
+
+        <div class="stepper-wrapper">
+          <div class="stepper-item active">
+            <div class="stepper-step">1</div>
+            <div class="stepper-title">Personal Info</div>
+          </div>
+          <div class="stepper-item">
+            <div class="stepper-step">2</div>
+            <div class="stepper-title">Payment</div>
+          </div>
+          <div class="stepper-item">
+            <div class="stepper-step">3</div>
+            <div class="stepper-title">Registration Completed</div>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="course-info text-center mb-4">
+            <h5>Courses: Environmental Impact Assessment</h5>
+            <p>20/Jan/2025 - 27/Jan/2025</p>
+          </div>
+
+          <!-- Step 1: Personal Info -->
+          <div class="form-step active" id="step1">
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <select class="form-select">
+                    <option selected disabled>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Address 1"
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Address 2"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="City" />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="State/Province"
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Postal Code"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Company"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Courses"
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="Additional Comments"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="button" class="next-btn" onclick="nextStep(1)">
+                Next
+              </button>
+            </form>
+          </div>
+
+          <!-- Step 2: Payment -->
+          <div class="form-step" id="step2">
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name On Card"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Expiry Date"
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Card Number"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="CVV" />
+                </div>
+              </div>
+              <button type="button" class="next-btn" onclick="nextStep(2)">
+                Next
+              </button>
+            </form>
+          </div>
+
+          <!-- Step 3: Completion -->
+          <div class="form-step" id="step3">
+            <div class="text-center">
+              <div class="success-checkmark">
+                <img src="assets/img/registration-complete.svg" alt="" />
+              </div>
+              <h4 class="success-text mb-3">Registration Successfully</h4>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function nextStep(currentStep) {
+        // Hide current step
+        document
+          .getElementById("step" + currentStep)
+          .classList.remove("active");
+        // Show next step
+        document
+          .getElementById("step" + (currentStep + 1))
+          .classList.add("active");
+
+        // Update stepper
+        const stepperItems = document.querySelectorAll(".stepper-item");
+        stepperItems[currentStep].classList.add("active");
+      }
+    </script>
+  </body>
+</html>
