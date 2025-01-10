@@ -965,17 +965,38 @@ input[type="radio"] {
   margin-bottom: 1rem;
 }
 
+.instructor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.instructor > div {
+  height: 250px;
+}
+
+.instructor > div > h4 {
+  padding-left: 1.5rem;
+}
+
 .instructor-card {
   position: relative;
 }
 
 .instructor-img {
   border: 4px solid var(--accent);
+  z-index: 2;
+  position: absolute;
+  top: 0;
 }
 
 .instructor-name {
+  position: absolute;
+  bottom: -225px;
+  z-index: 1;
   background-color: #ecffd8;
-  max-width: 200px;
+  width: 200px;
   height: 64px;
   border-top-left-radius: 78px;
   border-top-right-radius: 78px;
@@ -983,15 +1004,12 @@ input[type="radio"] {
   border-bottom-left-radius: 12px;
 }
 
-.instructor-name {
-  position: relative;
-}
-
 .instructor-name h5 {
   font-weight: 600;
-  position: absolute;
   bottom: 20%;
   right: 20%;
+  text-align: center;
+  padding-top: 2.5rem;
 }
 
 /* Media Queries start */
