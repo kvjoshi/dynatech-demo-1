@@ -39,10 +39,16 @@
         </div>
         <ul class="h-100">
           <li class="nav__item--active"><a href="dashboard.html">Home</a></li>
-          <li><a href="#">Communities</a></li>
-          <li><a href="./events.html">Events</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="./news-article.html">News & Articles</a></li>
+          <li>
+            <a href="communities.html">Communities</a>
+          </li>
+          <li><a href="events.html">Events</a></li>
+          <li>
+            <a href="courses.html">Courses</a>
+          </li>
+          <li>
+            <a href="news-article.html">News & Articles</a>
+          </li>
           <li>
             <a href="#">
               <img src="assets/img/user-round.svg" alt="" width="16" />
@@ -74,16 +80,18 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">Communities</a>
+              <a class="nav-link px-3" href="communities.html">Communities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">Events</a>
+              <a class="nav-link px-3" href="events.html">Events</a>
             </li>
             <li class="nav-item">
               <a class="nav-link px-3" href="courses.html">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">News & Articles</a>
+              <a class="nav-link px-3" href="news-article.html"
+                >News & Articles</a
+              >
             </li>
           </ul>
         </div>
@@ -393,103 +401,147 @@
       </section>
       <!-- Poll section -->
       <section class="poll">
-        <div
-          class="d-flex spacing justify-content-between align-items-center card-header"
-        >
-          <h4 class="header-title mb-0">Poll</h4>
-          <a href="#" class="shadow-link"><button>Explore More</button></a>
-        </div>
-        <span
-          style="
-            border-bottom: 1px solid #82bf40;
-            display: block;
-            margin-top: 0px;
-            margin-bottom: 18px;
-            margin-left: 13px;
-            margin-right: 13px;
-          "
-        ></span>
+        <div class="poll-card">
+          <div class="poll-card-header">
+            <h4>Poll</h4>
+          </div>
+          <div class="poll-card-body">
+            <p>
+              Which accounting certifications do you hold in addition to being a
+              Chartered Accountant?
+            </p>
 
-        <div class="pb-3">
-          <div class="chart-container">
-            <canvas id="donutChart"></canvas>
+            <!-- Poll Voting -->
+            <div class="poll-group" id="poll-vote">
+              <div class="poll-item">
+                <input
+                  type="radio"
+                  name="certifications"
+                  id="cpa"
+                  value="cpa"
+                />
+                <label for="cpa">Certified Public Accountant (CPA)</label>
+              </div>
+              <div class="poll-item">
+                <input
+                  type="radio"
+                  name="certifications"
+                  id="cma"
+                  value="cma"
+                />
+                <label for="cma">Certified Management Accountant (CMA)</label>
+              </div>
+              <div class="poll-item">
+                <input
+                  type="radio"
+                  name="certifications"
+                  id="acca"
+                  value="acca"
+                />
+                <label for="acca"
+                  >Association of Chartered Certified Accountants (ACCA)</label
+                >
+              </div>
+              <div class="poll-item">
+                <input
+                  type="radio"
+                  name="certifications"
+                  id="other"
+                  value="other"
+                />
+                <label for="other">Other</label>
+              </div>
+            </div>
+
+            <!-- Poll Results -->
+            <div class="poll-results d-none" id="poll-results">
+              <div class="result-item">
+                <div class="result">60%</div>
+                <div class="result-bar">
+                  <span>Certified Public Accountant (CPA)</span>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 60%; background-color: #82bf40"
+                      id="cpa-result"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-item">
+                <div class="result">20%</div>
+                <div class="result-bar">
+                  <span>Certified Management Accountant (CMA)</span>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-info"
+                      role="progressbar"
+                      style="width: 20%; background-color: #34a2d7"
+                      id="cma-result"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-item">
+                <div class="result">10%</div>
+                <div class="result-bar">
+                  <span
+                    >Association of Chartered Certified Accountants (ACCA)</span
+                  >
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-primary"
+                      role="progressbar"
+                      style="width: 10%; background-color: #7a92f6"
+                      id="acca-result"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-item">
+                <div class="result">5%</div>
+                <div class="result-bar">
+                  <span>Other</span>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 5%; background-color: #ffb666"
+                      id="other-result"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="poll-card-footer" id="poll-card-footer">
+            <div class="shadow-link">
+              <button id="vote-btn">Vote</button>
+            </div>
+            <span>5 Days Left</span>
           </div>
         </div>
       </section>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script>
-      const ctx = document.getElementById("donutChart").getContext("2d");
+      document
+        .getElementById("vote-btn")
+        .addEventListener("click", function () {
+          const selectedOption = document.querySelector(
+            'input[name="certifications"]:checked'
+          );
 
-      const data = {
-        labels: [
-          "Certified Public Accountant (CPA)",
-          "Financial Analyst",
-          "Tax Specialist",
-          "Auditor",
-        ],
-        datasets: [
-          {
-            data: [40, 47, 23, 20],
-            backgroundColor: [
-              "#00BCD4", // Turquoise
-              "#FF9800", // Orange
-              "#9C27B0", // Purple
-              "#FF4081", // Pink
-            ],
-            borderWidth: 0,
-            hoverOffset: 4,
-          },
-        ],
-      };
+          if (!selectedOption) {
+            alert("Please select an option before voting.");
+            return;
+          }
 
-      const config = {
-        type: "doughnut",
-        data: data,
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-          plugins: {
-            legend: {
-              display: false,
-            },
-            tooltip: {
-              enabled: true,
-              callbacks: {
-                label: function (context) {
-                  return `${context.label}: ${context.raw}%`;
-                },
-              },
-              backgroundColor: "rgba(0, 0, 0, 0.8)",
-              padding: 12,
-              cornerRadius: 6,
-              titleFont: {
-                size: 10,
-                weight: "bold",
-              },
-              bodyFont: {
-                size: 12,
-              },
-            },
-          },
-          cutout: "60%",
-          animation: {
-            animateScale: true,
-            animateRotate: true,
-          },
-          onClick: (event, elements) => {
-            if (elements && elements.length > 0) {
-              const element = elements[0];
-              const label = data.labels[element.index];
-              const value = data.datasets[0].data[element.index];
-              alert(`${label}: ${value}%`);
-            }
-          },
-        },
-      };
-
-      new Chart(ctx, config);
+          // Hide the voting section and show the results
+          document.getElementById("poll-vote").classList.add("d-none");
+          document.getElementById("poll-results").classList.remove("d-none");
+          document.getElementById("poll-card-footer").classList.add("d-none");
+        });
     </script>
   </body>
 </html>

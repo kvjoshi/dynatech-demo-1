@@ -130,6 +130,11 @@ table {
   border-spacing: 0;
 }
 
+video {
+  height: auto;
+  max-width: 100%;
+}
+
 /* Variables */
 :root {
   --primary: #273368;
@@ -667,26 +672,111 @@ section {
 }
 
 /* Poll Card  */
-.poll {
-  padding: 0;
+
+.poll-card-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--accent);
 }
 
-.chart-container {
-  position: relative;
-  margin: auto;
-  width: 100%;
-  max-width: 200px;
+.poll-card-header h4 {
+  font-weight: 600;
 }
 
-#chartjs-tooltip {
-  opacity: 1;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px;
+.poll-card-body {
+  padding-top: 8px;
+}
+
+.poll-card-body > p {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.poll-group {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.poll-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.poll-item > label {
+  font-size: 12px;
+}
+
+/* To style input radio */
+input[type="radio"] {
+  /* appearance: none;
+  -webkit-appearance: none; */
+  width: 16px;
+  height: 16px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+/* input[type="radio"]:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+} */
+
+.poll-card-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poll-card-footer > span {
+  color: #676768;
+  font-size: 10px;
+}
+
+.poll-results {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.poll-results > .result-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+}
+
+.poll-results > .result-item > .result {
   font-size: 14px;
-  pointer-events: none;
-  transform: translate(-50%, 0);
+  font-weight: 600;
+}
+
+.poll-results > .result-item > .result-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-item > div > span {
+  font-size: 12px;
+}
+
+.result-item > div > .progress {
+  background-color: white;
+}
+
+.result-item > div > .progress {
+  height: 7px;
+}
+
+.result-item > div > .progress > .progress-bar {
+  border-radius: 7px;
 }
 
 /* Event page styling start */
@@ -783,6 +873,133 @@ section {
   margin: 0.5rem 0 0.7rem;
 }
 
+/* Course detail page style start */
+
+.course-card-header {
+  display: flex;
+  border: none;
+  border-bottom: 3px solid #0000001a;
+  position: relative;
+}
+
+.course-card-header::before {
+  content: "";
+  height: 3rem;
+}
+
+.course-card-header-tab-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.course-card-header button {
+  font-weight: 500;
+  border: none;
+  background-color: white;
+  padding: 1rem 1.5rem;
+}
+
+.selected-tab {
+  color: white;
+  background-color: var(--primary) !important;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 1rem;
+  border-bottom: 3px solid var(--accent) !important;
+}
+
+.tab-panel[data-tab-id="details"] {
+  padding: 6px;
+}
+
+.tab-panel[data-tab-id="summary"] {
+  padding: 10px;
+  background-color: lightblue;
+}
+
+.tab-panel[data-tab-id="duration"] {
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+.details-card-header {
+  position: relative;
+}
+
+.details-card-header a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.details-card-header button {
+  color: white;
+  background-color: var(--primary);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  border-right: 3px solid var(--accent);
+  box-shadow: 0px 4px 4px 0px #0000004d;
+  box-shadow: 0px 8px 12px 6px #00000026;
+}
+
+.details-card-body p {
+  font-weight: 400;
+  color: #676768;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+
+.details-card-body > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-card-body .instructor h4 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.instructor-card {
+  position: relative;
+}
+
+.instructor-img {
+  border: 4px solid var(--accent);
+}
+
+.instructor-name {
+  background-color: #ecffd8;
+  max-width: 200px;
+  height: 64px;
+  border-top-left-radius: 78px;
+  border-top-right-radius: 78px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.instructor-name {
+  position: relative;
+}
+
+.instructor-name h5 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 20%;
+  right: 20%;
+}
+
 /* Media Queries start */
 @media (max-width: 1024px) {
   .dashboard-container,
@@ -865,6 +1082,11 @@ section {
 }
 
 @media (max-width: 425px) {
+  .account__card__body > div:first-child {
+    width: 100%;
+    left: 0;
+  }
+
   .news {
     max-width: 400px;
   }
