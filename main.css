@@ -665,26 +665,111 @@ section {
 }
 
 /* Poll Card  */
-.poll {
-  padding: 0;
+
+.poll-card-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--accent);
 }
 
-.chart-container {
-  position: relative;
-  margin: auto;
-  width: 100%;
-  max-width: 200px;
+.poll-card-header h4 {
+  font-weight: 600;
 }
 
-#chartjs-tooltip {
-  opacity: 1;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px;
+.poll-card-body {
+  padding-top: 8px;
+}
+
+.poll-card-body > p {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.poll-group {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.poll-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.poll-item > label {
+  font-size: 12px;
+}
+
+/* To style input radio */
+input[type="radio"] {
+  /* appearance: none;
+  -webkit-appearance: none; */
+  width: 16px;
+  height: 16px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+/* input[type="radio"]:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+} */
+
+.poll-card-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poll-card-footer > span {
+  color: #676768;
+  font-size: 10px;
+}
+
+.poll-results {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.poll-results > .result-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+}
+
+.poll-results > .result-item > .result {
   font-size: 14px;
-  pointer-events: none;
-  transform: translate(-50%, 0);
+  font-weight: 600;
+}
+
+.poll-results > .result-item > .result-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-item > div > span {
+  font-size: 12px;
+}
+
+.result-item > div > .progress {
+  background-color: white;
+}
+
+.result-item > div > .progress {
+  height: 7px;
+}
+
+.result-item > div > .progress > .progress-bar {
+  border-radius: 7px;
 }
 
 /* Event page styling start */
