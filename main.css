@@ -867,6 +867,8 @@ input[type="radio"] {
   margin: 0.5rem 0 0.7rem;
 }
 
+/* Course page style end */
+
 /* Course detail page style start */
 
 .course-card-header {
@@ -1104,5 +1106,71 @@ input[type="radio"] {
   /* Course page media query start*/
   .course-container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* News Detail page style start */
+
+.top-grey-card {
+  margin-top: 8px;
+  background-color: #d9d9d9;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  height: 166px;
+}
+
+.article-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #121212;
+}
+
+.article-date {
+  font-size: 12px;
+  font-weight: 400;
+  color: #676768;
+}
+
+.article-datepicker-icon {
+  height: 16px;
+  width: 16px;
+  outline: none;
+  color: #abb5be;
+  font-size: 10px;
+  width: 100%;
+}
+
+.article-content {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #676768;
+  margin-top: 12px;
+  margin-right: 0px;
+  line-height: 24px;
+}
+
+.news-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin: 12px;
+  border-bottom: 1px solid #82bf40;
+  padding-bottom: 2px;
+}
+
+.news-card-shadow {
+  box-shadow: 0px 1px 2px 0px #0000004d;
+  max-height: 427px;
+  overflow: auto;
+}
+
+.news-article-detail {
+  box-shadow: 0px 1px 2px 0px #0000004d;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .news-card-shadow {
+    margin-left: -18px;
   }
 }
