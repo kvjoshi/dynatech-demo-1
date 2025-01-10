@@ -877,6 +877,12 @@ input[type="radio"] {
 
 /* Course detail page style start */
 
+.course-card {
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px #0000004d;
+  box-shadow: 0px 1px 3px 1px #00000026;
+}
+
 .course-card-header {
   display: flex;
   border: none;
@@ -922,8 +928,7 @@ input[type="radio"] {
 }
 
 .tab-panel[data-tab-id="duration"] {
-  padding: 10px;
-  background-color: lightgreen;
+  padding: 30px;
 }
 
 .details-card-header {
@@ -1021,9 +1026,81 @@ input[type="radio"] {
 }
 
 /* Summary tab style start */
-div[data-tab-id="summary"] table {
+.summary-table {
   width: 100%;
+  padding: 1rem 2rem;
   background-color: var(--background);
+}
+
+.summary-table > .row:first-child {
+  padding: 0.8rem 0 0.5rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.summary-table > .row:not(:first-child) {
+  margin-top: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.summary-table > .row > .col-3 {
+  color: var(--primary);
+  font-weight: 500;
+}
+/* Durations tab style start */
+
+.timeline-container {
+  background-color: var(--background);
+  padding: 1rem;
+  border: 1px solid #9898988c;
+  border-radius: 4px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 64px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 33px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #c4c4c4;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #7676801f;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #696f8a;
+  border: 2px solid #c4c4c4;
+}
+
+.timeline-week {
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.timeline-content {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 8px;
 }
 
 /* Media Queries start */
@@ -1118,6 +1195,19 @@ div[data-tab-id="summary"] table {
   /* Course page media query start*/
   .course-container {
     grid-template-columns: 1fr;
+  }
+
+  /* Course detail page media query start */
+  .tab-panel[data-tab-id="summary"] {
+    padding: 0.5rem;
+  }
+
+  .summary-table {
+    padding: 1rem;
+  }
+
+  .tab-panel[data-tab-id="duration"] {
+    padding: 1rem;
   }
 }
 
