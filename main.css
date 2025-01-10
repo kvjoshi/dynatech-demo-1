@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
 /* General Reset */
 * {
   box-sizing: border-box;
@@ -161,6 +166,7 @@ input[type="checkbox"]:checked {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   background-color: var(--background);
 }
 
@@ -912,8 +918,7 @@ input[type="radio"] {
 }
 
 .tab-panel[data-tab-id="summary"] {
-  padding: 10px;
-  background-color: lightblue;
+  padding: 30px;
 }
 
 .tab-panel[data-tab-id="duration"] {
@@ -946,6 +951,7 @@ input[type="radio"] {
   box-shadow: 0px 8px 12px 6px #00000026;
 }
 
+/* Details tab style start */
 .details-card-body p {
   font-weight: 400;
   color: #676768;
@@ -1012,6 +1018,12 @@ input[type="radio"] {
   right: 20%;
   text-align: center;
   padding-top: 2.5rem;
+}
+
+/* Summary tab style start */
+div[data-tab-id="summary"] table {
+  width: 100%;
+  background-color: var(--background);
 }
 
 /* Media Queries start */
