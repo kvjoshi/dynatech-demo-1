@@ -1,0 +1,156 @@
+.breadcrumb-item > a {
+  color: var(--primary) !important;
+  text-decoration: none;
+}
+
+.stepper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  position: relative;
+  max-width: 800px;
+}
+
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -98%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 98%;
+  z-index: 2;
+}
+
+/* .stepper-item:first-child::before {
+        content: none;
+      }
+
+      .stepper-item:last-child::after {
+        content: none;
+      } */
+
+.stepper-step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 6px;
+  z-index: 3;
+}
+
+.stepper-title {
+  color: #333;
+  font-size: 14px;
+}
+
+.stepper-item.active .stepper-step {
+  background-color: #234b8c;
+}
+
+.course-info h5 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.course-info p {
+  color: #8080808c;
+  font-size: 14px;
+  font-weight: 14px;
+  margin-bottom: 36px;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.next-btn {
+  border: none;
+  border-left: 2px solid var(--accent);
+  border-radius: 4px;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 20px;
+  background: linear-gradient(270deg, #34a2d7 0%, #273368 100%);
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.success-text {
+  margin-top: 8px;
+  color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+  .stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: -30%;
+    z-index: 2;
+  }
+
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 30%;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    z-index: 2;
+  }
+
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    z-index: 2;
+  }
+}
