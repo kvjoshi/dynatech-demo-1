@@ -93,16 +93,14 @@
       <div class="course-card bg-white">
         <div class="course-card-header">
           <div class="course-card-header-tab-group">
-            <button data-tab-id="details" class="">Details</button>
+            <button data-tab-id="details" class="selected-tab">Details</button>
             <button data-tab-id="summary" class="">Summary</button>
-            <button data-tab-id="duration" class="selected-tab">
-              Duration
-            </button>
+            <button data-tab-id="duration" class="">Duration</button>
           </div>
         </div>
         <div class="course-card-body">
           <div class="tab-content">
-            <div data-tab-id="details" class="tab-panel" style="display: none">
+            <div data-tab-id="details" class="tab-panel">
               <div class="details-card-header">
                 <iframe
                   width="100%"
@@ -227,7 +225,7 @@
                 </div>
               </div>
             </div>
-            <div data-tab-id="duration" class="tab-panel">
+            <div data-tab-id="duration" class="tab-panel" style="display: none">
               <div class="timeline-container">
                 <div class="timeline">
                   <div class="timeline-item">
