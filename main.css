@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
 /* General Reset */
 * {
   box-sizing: border-box;
@@ -161,6 +166,7 @@ input[type="checkbox"]:checked {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   background-color: var(--background);
 }
 
@@ -873,6 +879,8 @@ input[type="radio"] {
   margin: 0.5rem 0 0.7rem;
 }
 
+/* Course page style end */
+
 /* Course detail page style start */
 
 .course-card-header {
@@ -916,8 +924,7 @@ input[type="radio"] {
 }
 
 .tab-panel[data-tab-id="summary"] {
-  padding: 10px;
-  background-color: lightblue;
+  padding: 30px;
 }
 
 .tab-panel[data-tab-id="duration"] {
@@ -950,6 +957,7 @@ input[type="radio"] {
   box-shadow: 0px 8px 12px 6px #00000026;
 }
 
+/* Details tab style start */
 .details-card-body p {
   font-weight: 400;
   color: #676768;
@@ -971,17 +979,38 @@ input[type="radio"] {
   margin-bottom: 1rem;
 }
 
+.instructor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.instructor > div {
+  height: 250px;
+}
+
+.instructor > div > h4 {
+  padding-left: 1.5rem;
+}
+
 .instructor-card {
   position: relative;
 }
 
 .instructor-img {
   border: 4px solid var(--accent);
+  z-index: 2;
+  position: absolute;
+  top: 0;
 }
 
 .instructor-name {
+  position: absolute;
+  bottom: -225px;
+  z-index: 1;
   background-color: #ecffd8;
-  max-width: 200px;
+  width: 200px;
   height: 64px;
   border-top-left-radius: 78px;
   border-top-right-radius: 78px;
@@ -989,15 +1018,18 @@ input[type="radio"] {
   border-bottom-left-radius: 12px;
 }
 
-.instructor-name {
-  position: relative;
-}
-
 .instructor-name h5 {
   font-weight: 600;
-  position: absolute;
   bottom: 20%;
   right: 20%;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+/* Summary tab style start */
+div[data-tab-id="summary"] table {
+  width: 100%;
+  background-color: var(--background);
 }
 
 /* Media Queries start */
@@ -1094,5 +1126,71 @@ input[type="radio"] {
   /* Course page media query start*/
   .course-container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* News Detail page style start */
+
+.top-grey-card {
+  margin-top: 8px;
+  background-color: #d9d9d9;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  height: 166px;
+}
+
+.article-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #121212;
+}
+
+.article-date {
+  font-size: 12px;
+  font-weight: 400;
+  color: #676768;
+}
+
+.article-datepicker-icon {
+  height: 16px;
+  width: 16px;
+  outline: none;
+  color: #abb5be;
+  font-size: 10px;
+  width: 100%;
+}
+
+.article-content {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #676768;
+  margin-top: 12px;
+  margin-right: 0px;
+  line-height: 24px;
+}
+
+.news-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin: 12px;
+  border-bottom: 1px solid #82bf40;
+  padding-bottom: 2px;
+}
+
+.news-card-shadow {
+  box-shadow: 0px 1px 2px 0px #0000004d;
+  max-height: 427px;
+  overflow: auto;
+}
+
+.news-article-detail {
+  box-shadow: 0px 1px 2px 0px #0000004d;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .news-card-shadow {
+    margin-left: -18px;
   }
 }
