@@ -1,0 +1,40 @@
+.membership-card {
+  border-radius: 15px;
+  transition: transform 0.3s;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #0d6efd, #00c6ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.membership-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+.feature-item {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feature-active {
+  color: #0d6efd;
+}
+.feature-inactive {
+  color: #6c757d;
+}
+.check-icon::before {
+  content: "✓";
+  font-weight: bold;
+}
+.select-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+}
