@@ -191,6 +191,7 @@
 
 .quantity-control button {
   border: none;
+  background-color: transparent;
   width: 35px;
   height: 35px;
   display: flex;
@@ -210,6 +211,7 @@
 }
 
 .price-section {
+  width: 130px;
   background-color: #d9d9d94d;
   margin-top: 2px;
   padding: 1rem;

@@ -35,8 +35,8 @@
         <ul class="h-100">
           <li><a href="#">Home</a></li>
           <li><a href="#">Communities</a></li>
-          <li><a href="./events.html">Events</a></li>
-          <li class="nav__item--active">
+          <li class="nav__item--active"><a href="./events.html">Events</a></li>
+          <li>
             <a href="./courses.html">Courses</a>
           </li>
           <li><a href="./news-article.html">News & Articles</a></li>
@@ -72,10 +72,10 @@
               <a class="nav-link px-3" href="#">Communities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#">Events</a>
+              <a class="nav-link px-3 sidenav-active" href="#">Events</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3 sidenav-active" href="#">Courses</a>
+              <a class="nav-link px-3" href="#">Courses</a>
             </li>
             <li class="nav-item">
               <a class="nav-link px-3" href="#">News & Articles</a>
@@ -88,13 +88,13 @@
       <div class="course-card bg-white">
         <div class="course-card-header">
           <div class="course-card-header-tab-group">
-            <button data-tab-id="details" class="">Details</button>
-            <button data-tab-id="session" class="selected-tab">Sessions</button>
+            <button data-tab-id="details" class="selected-tab">Details</button>
+            <button data-tab-id="session" class="">Sessions</button>
           </div>
         </div>
         <div class="course-card-body">
           <div class="tab-content">
-            <div data-tab-id="details" class="tab-panel" style="display: none">
+            <div data-tab-id="details" class="tab-panel">
               <div class="details-card-header">
                 <div
                   style="
@@ -251,7 +251,7 @@
               <!-- Sponsor and speaker section end -->
             </div>
 
-            <div data-tab-id="session" class="tab-panel">
+            <div data-tab-id="session" class="tab-panel" style="display: none">
               <div class="container mt-4">
                 <div class="session-card">
                   <div class="session-details">
@@ -277,9 +277,9 @@
                     <p class="session-membership">Non Member/Member</p>
                   </div>
                   <div class="quantity-control">
-                    <button onclick="decreaseQuantity(this)">-</button>
-                    <span>0</span>
                     <button onclick="increaseQuantity(this)">+</button>
+                    <span>0</span>
+                    <button onclick="decreaseQuantity(this)">-</button>
                   </div>
                   <div class="price-section">
                     <button>Book Now</button>
