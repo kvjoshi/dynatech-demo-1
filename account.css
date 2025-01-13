@@ -111,3 +111,37 @@ thead > tr > th:first-child {
 .action-btn:last-child {
   border-left: 2px solid var(--accent);
 }
+
+@media (max-width: 768px) {
+  .invoice-table-container table {
+    min-width: 800px;
+  }
+
+  .invoice-table-container thead > tr > th:first-child {
+    min-width: 40px;
+  }
+
+  .invoice-table-container thead > tr > th:nth-child(2) {
+    min-width: 160px;
+  }
+
+  .invoice-table-container thead > tr > th:nth-child(3) {
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .invoice-table-container thead > tr > th:nth-child(4) {
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .invoice-table-container thead > tr > th:nth-child(5) {
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .invoice-table-container thead > tr > th:nth-child(6) {
+    min-width: 100px;
+    max-width: 100px;
+  }
+}
