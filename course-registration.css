@@ -51,25 +51,32 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #cfd6dc;
   text-align: center;
   line-height: 40px;
-  color: #fff;
+  color: white;
   font-weight: bold;
   margin-bottom: 6px;
   z-index: 3;
 }
 
 .stepper-title {
-  color: #333;
+  color: #abb7c2;
   font-size: 14px;
 }
 
 .stepper-item.active .stepper-step {
-  background-color: #234b8c;
+  background-color: var(--primary);
+  color: white;
+}
+
+.stepper-item.active .stepper-title {
+  color: #0d0b26;
+  font-weight: 500;
 }
 
 .course-info h5 {
+  color: #121212;
   margin-bottom: 10px;
   font-weight: 500;
 }
@@ -109,6 +116,34 @@
 .success-text {
   margin-top: 8px;
   color: var(--accent);
+}
+
+/* Style all input fields and select dropdowns */
+input,
+select,
+textarea {
+  color: #95a5a6 !important;
+}
+
+/* Style placeholder text */
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: #95a5a6 !important;
+}
+
+/* Style the date input specifically */
+input[type="date"] {
+  color: #95a5a6 !important;
+}
+
+/* Style the select dropdown */
+select {
+  color: #95a5a6 !important;
+}
+
+select option {
+  color: #95a5a6 !important;
 }
 
 @media (max-width: 1024px) {
