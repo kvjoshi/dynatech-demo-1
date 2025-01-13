@@ -1,3 +1,8 @@
+.event-date {
+  color: #9898988c;
+  font-size: 12px;
+}
+
 .event-card-shadow {
   box-shadow: 0px 1px 2px 0px #0000004d;
   overflow: auto;
@@ -6,7 +11,7 @@
 }
 
 .event-description {
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 24px;
   font-weight: 400;
   color: #676768;
@@ -140,11 +145,18 @@
 
 .sponsor-container > div {
   margin: 0 auto;
+  background-color: white;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px 0px #00000040;
 }
 
 .sponsor-container > div > img {
   width: 100%;
   object-fit: cover;
+  width: 236px;
+  height: 221px;
+  border-radius: 8px;
 }
 
 /* Session Tab Styling */
