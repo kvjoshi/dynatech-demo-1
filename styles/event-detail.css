@@ -3,6 +3,16 @@
   font-size: 12px;
 }
 
+.event-cta button {
+  border: none;
+  border-left: 2px solid var(--accent);
+}
+
+.event-card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .event-card-shadow {
   box-shadow: 0px 1px 2px 0px #0000004d;
   overflow: auto;
