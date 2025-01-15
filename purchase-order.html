@@ -378,14 +378,14 @@
                         />
                       </div>
                       <div class="col-lg-3">
-                        <label for="subTotal" class="form-label">
+                        <label for="invoiceSubTotal" class="form-label">
                           Subtotal
                         </label>
                         <input
                           type="text"
                           class="form-control"
-                          id="subTotal"
-                          name="sub_total"
+                          id="invoiceSubTotal"
+                          name="invoice_sub_total"
                           placeholder="Subtotal"
                         />
                       </div>
@@ -427,7 +427,363 @@
         <!-- Step 2: Review & confirm -->
         <div class="form-step" id="step2">
           <h3>Review & Confirm</h3>
-          <div id="review-container" class="p-3"></div>
+          <div id="review-container" class="p-3">
+            <form>
+              <div class="row g-4 p-3">
+                <div class="col-12">
+                  <div class="row g-4">
+                    <div class="col-lg-9">
+                      <div class="form-section--heading">Purchase Order</div>
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row g-3">
+                            <div class="col-md-3">
+                              <label
+                                for="reviewPurchaseOrder"
+                                class="form-label"
+                                >Purchase Order</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="reviewPurchaseOrder"
+                                name="review_purchase_order"
+                                placeholder="Purchase Order"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label
+                                for="reviewConfirmDeliveryDate"
+                                class="form-label"
+                                >Confirm Delivery Date</label
+                              >
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="reviewConfirmDeliveryDate"
+                                name="review_confirm_delivery_date"
+                                placeholder="Confirm Delivery Date"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label
+                                for="reviewRequestedDeliveryDate"
+                                class="form-label"
+                                >Requested Delivery Date</label
+                              >
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="reviewRequestedDeliveryDate"
+                                name="review_requested_delivery_date"
+                                placeholder="Requested Delivery Date"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label for="revieOrderDate" class="form-label"
+                                >Order Date</label
+                              >
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="reviewOrderDate"
+                                name="review_order_date"
+                                placeholder="Order Date"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label for="reviewShipVia" class="form-label"
+                                >Ship Via</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="reviewShipVia"
+                                name="review_ship_via"
+                                placeholder="Ship via"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label for="reviewPaymentTerm" class="form-label"
+                                >Payment Term</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="reviewPaymentTerm"
+                                name="review_payment_term"
+                                placeholder="Payment Term"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label for="reviewDeliveryTerm" class="form-label"
+                                >Delivery Term</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="reviewDeliveryTerm"
+                                name="review_delivery_term"
+                                placeholder="Delivery Term"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-3">
+                              <label
+                                for="reviewConfirmedDeliveryDate"
+                                class="form-label"
+                                >Confirmed Delivery Date</label
+                              >
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="reviewConfirmedDeliveryDate"
+                                name="review_confirmed_delivery_date"
+                                placeholder="Confirmed Delivery Date"
+                                disabled
+                              />
+                            </div>
+                            <div class="col-md-12 col-xs-6 mb-2">
+                              <div class="horizontal_line"></div>
+                            </div>
+                            <div class="col-md-3">
+                              <label for="reviewSubTotal" class="form-label"
+                                >Sub Total</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="reviewSubTotal"
+                                name="review_sub_total"
+                                placeholder="Sub Total"
+                                disabled
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="card mb-4 mb-lg-0">
+                        <div class="card-header">
+                          <div class="form-section--heading mt-3">
+                            Billing Address
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewBillingAddress"
+                            name="review_billing_address"
+                            placeholder="Billing Address"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="form-section--heading mt-3">
+                            Delivery Address
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewDeliveryAddress"
+                            name="review_delivery_address"
+                            placeholder="Delivery Address"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-section--heading">Product Details</div>
+                      <div class="p-3 overflow-auto">
+                        <table class="table">
+                          <thead class="table-primary">
+                            <tr>
+                              <th>Product</th>
+                              <th>Description</th>
+                              <th>Unit</th>
+                              <th>Quantity</th>
+                              <th>Rested Delivery Date</th>
+                              <th>Confirmed Delivery Date</th>
+                              <th>Purchase Price</th>
+                              <th>Line Order</th>
+                              <th>Line Amount</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td class="editable">Value 1</td>
+                              <td class="editable">Value 2</td>
+                              <td class="editable">Value 3</td>
+                              <td class="editable">Value 4</td>
+                              <td class="editable">Value 5</td>
+                              <td class="editable">Value 6</td>
+                              <td class="editable">Value 7</td>
+                              <td class="editable">Value 8</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td class="editable">Value A</td>
+                              <td class="editable">Value B</td>
+                              <td class="editable">Value C</td>
+                              <td class="editable">Value D</td>
+                              <td class="editable">Value E</td>
+                              <td class="editable">Value F</td>
+                              <td class="editable">Value G</td>
+                              <td class="editable">Value H</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-section--heading">Packing Slips</div>
+                      <div class="row g-3 p-3">
+                        <div class="col-lg-3">
+                          <label
+                            for="reviewPackingSlipNumber"
+                            class="form-label"
+                            >Packing Slip Number</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewPackingSlipNumber"
+                            name="review_packing_slip_number"
+                            placeholder="Packing Slip Number"
+                            disabled
+                          />
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="reviewShippingDate" class="form-label"
+                            >Shipping Date</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewShippingDate"
+                            name="review_shipping_date"
+                            placeholder="Shipping Date"
+                            disabled
+                          />
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="reviewCarrier" class="form-label"
+                            >Carrier</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewCarrier"
+                            name="review_carrier"
+                            placeholder="Carrier"
+                            disabled
+                          />
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="reviewTrackingNumber" class="form-label"
+                            >Tracking Number</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewTrackingNumber"
+                            name="review_tracking_number"
+                            placeholder="Tracking Number"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-section--heading">
+                        Sales Order Invoices
+                      </div>
+                      <div class="row g-3 p-3">
+                        <div class="col-lg-3">
+                          <label for="reviewInvoiceNumber" class="form-label">
+                            Invoice Number
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewInvoiceNumber"
+                            name="review_invoice_number"
+                            placeholder="Invoice Number"
+                            disabled
+                          />
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="reviewInvoiceSubTotal" class="form-label">
+                            Subtotal
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewInvoiceSubTotal"
+                            name="review_invoice_sub_total"
+                            placeholder="Subtotal"
+                            disabled
+                          />
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="reviewsalesTax" class="form-label">
+                            Sales Tax
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewSalesTax"
+                            name="review_sales_tax"
+                            placeholder="Sales Tax"
+                            disabled
+                          />
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="reviewtotalAmount" class="form-label">
+                            Total Amount
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reviewTotalAmount"
+                            name="review_total_amount"
+                            placeholder="Total Amount"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
           <div class="px-3 d-flex justify-content-end">
             <button type="button" class="next-btn" onclick="nextStep(2)">
               Next
@@ -484,13 +840,28 @@
           .getElementById("step" + currentStep)
           .classList.remove("active");
         // Show next step
-        document
-          .getElementById("step" + (currentStep + 1))
-          .classList.add("active");
+        const nextStepEl = document.getElementById("step" + (currentStep + 1));
+        nextStepEl.classList.add("active");
 
         // Update stepper
         const stepperItems = document.querySelectorAll(".stepper-item");
         stepperItems[currentStep].classList.add("active");
+
+        if (currentStep === 1) {
+          // Populate Step 2 with data from Step 1
+          const formStep1 = document.querySelector("#step1 form");
+          const formStep2 = document.querySelector("#step2 form");
+
+          const fields = formStep1.querySelectorAll("input, textarea, select");
+          fields.forEach((field) => {
+            const step2Field = formStep2.querySelector(
+              `[name="review_${field.name}"]`
+            );
+            if (step2Field) {
+              step2Field.value = field.value; // Copy value
+            }
+          });
+        }
       }
 
       // Edit row
