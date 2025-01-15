@@ -69,59 +69,40 @@
   line-height: 24px;
 }
 
-/* Instructor Card */
-
-.event-instructor-container {
-  position: relative;
+.speaker-sponser-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 1rem 5rem 1rem;
 }
 
-.event-instructor-container > h3 {
+/* Instructor Card */
+.event-speaker-wrapper > h3 {
   color: #121212;
   font-size: 20px;
   font-weight: 600;
 }
-
-.event-instructor-container > div.event-instructor-card:nth-child(2) {
-  position: absolute;
-  top: 3%;
-  left: -4%;
-}
-
-.event-instructor-container > div.event-instructor-card:last-child {
-  position: absolute;
-  top: 3%;
-  left: 50%;
-}
-.event-instructor {
+.event-speaker-container {
   display: flex;
-  width: auto;
-  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.8rem;
 }
 
-.event-instructor > div {
-  height: 250px;
-  width: max-content;
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.event-instructor > div > h4 {
-  padding-left: 1.5rem;
-}
-
-.event-instructor-card {
-  position: absolute;
-}
-
-.event-instructor-img {
+.speaker-image img {
   border: 4px solid var(--accent);
   z-index: 2;
-  position: absolute;
-  top: 0;
+  object-fit: cover;
+  position: relative;
 }
 
-.event-instructor-name {
+.speaker-name {
   position: absolute;
-  bottom: -225px;
-  z-index: 1;
+  bottom: -16%;
   background-color: #ecffd8;
   width: 200px;
   height: 64px;
@@ -131,14 +112,13 @@
   border-bottom-left-radius: 12px;
 }
 
-.event-instructor-name h5 {
+.speaker-name h5 {
   font-weight: 600;
-  bottom: 20%;
-  right: 20%;
   text-align: center;
   padding-top: 2.5rem;
 }
 
+/* Sponsor Container */
 .sponsor-container-heading {
   font-size: 20px;
   font-weight: 600;
@@ -147,10 +127,7 @@
 .sponsor-container {
   display: flex;
   gap: 1rem;
-  align-self: flex-end;
-  padding-bottom: 2.5rem;
   margin-top: 0.8rem;
-  flex-wrap: wrap;
 }
 
 .sponsor-container > div {
@@ -163,9 +140,8 @@
 
 .sponsor-container > div > img {
   width: 100%;
+  height: 210px;
   object-fit: cover;
-  width: 236px;
-  height: 221px;
   border-radius: 8px;
 }
 
@@ -282,18 +258,13 @@
 }
 
 @media (max-width: 1024px) {
-  .event-instructor-container > div.event-instructor-card:nth-child(2) {
-    left: 20%;
+  .speaker-sponser-container {
+    flex-direction: column;
+    gap: 4rem;
   }
 
-  .event-instructor-container > div.event-instructor-card:last-child {
-    left: 55%;
-  }
-
-  .speaker-sponser-container > div:last-child {
-    margin-top: 15rem;
-    align-self: normal !important;
-    justify-content: space-between;
+  .event-speaker-container {
+    justify-content: space-evenly;
   }
 }
 
@@ -306,32 +277,18 @@
     text-align: center;
     gap: 8px;
   }
-
-  .event-instructor-container > div.event-instructor-card:nth-child(2) {
-    left: 8%;
-  }
-
-  .event-instructor-container > div.event-instructor-card:last-child {
-    left: 55%;
-  }
 }
 
 @media (max-width: 425px) {
-  .event-instructor-container {
-    height: 550px;
+  .event-speaker-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
   }
 
-  .event-instructor-container > div.event-instructor-card:nth-child(2) {
-    left: 20%;
-  }
-
-  .event-instructor-container > div.event-instructor-card:last-child {
-    left: 20%;
-    top: 50%;
-  }
-
-  .speaker-sponser-container > div:last-child {
-    margin-top: 0;
+  .sponsor-container {
+    flex-direction: column;
   }
 
   .session-card {
