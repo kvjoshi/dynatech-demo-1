@@ -14,11 +14,13 @@
     ></script>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="account.css" />
+    <script src="user-agent-switch.js" defer></script>
+    <script src="mobile-nav.js" defer></script>
   </head>
   <body>
     <header>
       <nav
-        class="container d-flex justify-content-between align-items-center px-4 p-lg-0"
+        class="desktop-nav container d-flex justify-content-between align-items-center px-4 p-lg-0"
       >
         <div class="h-100 d-flex gap-2 align-items-center">
           <button
@@ -47,6 +49,23 @@
           </li>
         </ul>
       </nav>
+      <div
+        class="mobile-nav-top d-flex justify-content-between align-items-center px-4"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <img src="assets/img/jam_menu-light.svg" alt="" width="20" />
+        </button>
+        <div class="text-white">Dashboard</div>
+        <a href="account.html">
+          <img src="assets/img/user-round.svg" alt="" width="20" />
+        </a>
+      </div>
       <!-- Mobile sidebar -->
       <div
         class="offcanvas offcanvas-start"
@@ -84,7 +103,7 @@
         </div>
       </div>
     </header>
-    <main class="container my-3 p-3 p-lg-2">
+    <main class="container p-4 p-lg-2">
       <div class="account__container row gap-4">
         <div class="col-lg-3 p-0">
           <h4 class="account__title">My Account</h4>
@@ -170,6 +189,41 @@
         </div>
       </div>
     </main>
+    <footer class="mobile-nav-bottom">
+      <div></div>
+      <ul>
+        <li>
+          <a href="dashboard.html">
+            <img src="assets/footer-icons/home-inactive.svg" alt="" />
+            <span class="d-none">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="communities.html">
+            <img src="assets/footer-icons/community-inactive.svg" alt="" />
+            <span class="d-none">Communities</span>
+          </a>
+        </li>
+        <li>
+          <a href="events.html">
+            <img src="assets/footer-icons/events-inactive.svg" alt="" />
+            <span class="d-none">Events</span>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html">
+            <img src="assets/footer-icons/courses-inactive.svg" alt="" />
+            <span class="d-none">Courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="news-article.html">
+            <img src="assets/footer-icons/news-article-inactive.svg" alt="" />
+            <span class="d-none">News</span>
+          </a>
+        </li>
+      </ul>
+    </footer>
     <script>
       // Get all the tab buttons
       const tabButtons = document.querySelectorAll(

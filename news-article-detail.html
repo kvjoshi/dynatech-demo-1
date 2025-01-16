@@ -9,11 +9,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="main.css" />
+    <script src="user-agent-switch.js" defer></script>
+    <script src="mobile-nav.js" defer></script>
   </head>
   <body>
     <header>
       <nav
-        class="container d-flex justify-content-between align-items-center px-4 p-lg-0"
+        class="desktop-nav container d-flex justify-content-between align-items-center px-4 p-lg-0"
       >
         <div class="h-100 d-flex gap-2 align-items-center">
           <button
@@ -44,6 +46,23 @@
           </li>
         </ul>
       </nav>
+      <div
+        class="mobile-nav-top d-flex justify-content-between align-items-center px-4"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <img src="assets/img/jam_menu-light.svg" alt="" width="20" />
+        </button>
+        <div class="text-white">News & Article</div>
+        <a href="account.html">
+          <img src="assets/img/user-round.svg" alt="" width="20" />
+        </a>
+      </div>
       <!-- Mobile sidebar -->
       <div
         class="offcanvas offcanvas-start"
@@ -84,115 +103,152 @@
       </div>
     </header>
 
-    <main class="container news-article-detail mt-5 bg-white pb-5">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="top-grey-card w-100"></div>
-      </div>
-
-      <div class="d-flex justify-content-between mt-3 px-3">
-        <h4 class="article-title">Article Name</h4>
-        <div class="d-flex justify-content-between align-items-center gap-1">
-          <span class="article-date">10/01/2024</span>
-          <img
-            src="/assets/img/datepicker_icon.svg"
-            class="article-datepicker-icon"
-            alt="datepicker-icon"
-          />
+    <main class="container p-4">
+      <div class="news-article-detail bg-white p-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="top-grey-card w-100"></div>
         </div>
-      </div>
 
-      <div class="row px-3">
-        <div class="col-lg-8">
-          <div class="article-content">
-            This webinar seeks to encourage members to start thinking about laws
-            and legislation that could assist in making the use of AI safer.
-            Currently, there is no comprehensive legislation or regulations in
-            South Africa that regulate the development of AI or specifically
-            prohibit or restrict their use. Companies need to start thinking of
-            policies and procedures to put in place in order to protect
-            themselves.
-          </div>
-          <div class="article-content">
-            South Africa is heavily dependent on the application of data
-            protection legislation for the regulation of AI. A number of African
-            jurisdictions have taken steps to address this unique policy
-            challenge, with various African countries implementing AI
-            strategies, others still in the process of consultation with
-            stakeholders on AI policies.
-          </div>
-          <div class="article-content">
-            TAfrica has again found itself on the receiving end of AI
-            technologies, but this time, the continent can influence their
-            regulation. This begins with informing stakeholders of what the risk
-            are and then collectively seeking a solution that will result in
-            policies and procedures around AI, which will drive the law making
-            process within the African continent.his webinar seeks to encourage
-            members to start thinking about laws and legislation that could
-            assist in making the use of AI safer. Currently, there is no
-            comprehensive legislation or regulations in South Africa that
-            regulate the development of AI or specifically prohibit or restrict
-            their use. Companies need to start thinking of policies and
-            procedures to put in place in order to protect themselves.
+        <div class="d-flex justify-content-between mt-3 px-3">
+          <h4 class="article-title">Article Name</h4>
+          <div class="d-flex justify-content-between align-items-center gap-1">
+            <span class="article-date">10/01/2024</span>
+            <img
+              src="/assets/img/datepicker_icon.svg"
+              class="article-datepicker-icon"
+              alt="datepicker-icon"
+            />
           </div>
         </div>
-        <div class="news-card-shadow rounded col-lg-4 mt-2 mr-4">
-          <h5 class="news-title">Today News</h5>
 
-          <div class="card-body">
-            <div
-              class="event d-flex align-items-center mb-3 border-bottom ps-4 pb-3"
-            >
-              <img
-                src="./assets/img/event1.svg"
-                width="90"
-                height="70"
-                class="img-fluid rounded"
-                alt="Event Image"
-              />
-              <div class="ms-3">
-                <span class="d-block event-title">
-                  Many desktop publishing packages and web page editors now use.
-                </span>
-                <span class="event-timestamp">4 min read</span>
-              </div>
+        <div class="row px-3">
+          <div class="col-lg-8">
+            <div class="article-content">
+              This webinar seeks to encourage members to start thinking about
+              laws and legislation that could assist in making the use of AI
+              safer. Currently, there is no comprehensive legislation or
+              regulations in South Africa that regulate the development of AI or
+              specifically prohibit or restrict their use. Companies need to
+              start thinking of policies and procedures to put in place in order
+              to protect themselves.
             </div>
-            <div
-              class="event d-flex align-items-center mb-3 border-bottom ps-4 pb-3"
-            >
-              <img
-                src="./assets/img/event2.svg"
-                width="90"
-                height="70"
-                class="img-fluid rounded"
-                alt="Event Image"
-              />
-              <div class="ms-3">
-                <span class="d-block event-title">
-                  SAICA Limpopo District: Ethics for Trainees session
-                </span>
-                <span class="event-timestamp">4 min read</span>
-              </div>
+            <div class="article-content">
+              South Africa is heavily dependent on the application of data
+              protection legislation for the regulation of AI. A number of
+              African jurisdictions have taken steps to address this unique
+              policy challenge, with various African countries implementing AI
+              strategies, others still in the process of consultation with
+              stakeholders on AI policies.
             </div>
-            <div class="event d-flex align-items-center ps-4 pb-3">
-              <img
-                src="./assets/img/event3.svg"
-                width="90"
-                height="70"
-                class="img-fluid rounded"
-                alt="Event Image"
-              />
-              <div class="ms-3">
-                <span class="d-block event-title">
-                  SAICA Limpopo District: Ethics for Trainees session
-                </span>
-                <span class="event-timestamp">4 min read</span>
+            <div class="article-content">
+              TAfrica has again found itself on the receiving end of AI
+              technologies, but this time, the continent can influence their
+              regulation. This begins with informing stakeholders of what the
+              risk are and then collectively seeking a solution that will result
+              in policies and procedures around AI, which will drive the law
+              making process within the African continent.his webinar seeks to
+              encourage members to start thinking about laws and legislation
+              that could assist in making the use of AI safer. Currently, there
+              is no comprehensive legislation or regulations in South Africa
+              that regulate the development of AI or specifically prohibit or
+              restrict their use. Companies need to start thinking of policies
+              and procedures to put in place in order to protect themselves.
+            </div>
+          </div>
+          <div class="news-card-shadow rounded col-lg-4 mt-2 mr-4">
+            <h5 class="news-title">Today News</h5>
+
+            <div class="card-body">
+              <div
+                class="event d-flex align-items-center mb-3 border-bottom ps-4 pb-3"
+              >
+                <img
+                  src="./assets/img/event1.svg"
+                  width="90"
+                  height="70"
+                  class="img-fluid rounded"
+                  alt="Event Image"
+                />
+                <div class="ms-3">
+                  <span class="d-block event-title">
+                    Many desktop publishing packages and web page editors now
+                    use.
+                  </span>
+                  <span class="event-timestamp">4 min read</span>
+                </div>
+              </div>
+              <div
+                class="event d-flex align-items-center mb-3 border-bottom ps-4 pb-3"
+              >
+                <img
+                  src="./assets/img/event2.svg"
+                  width="90"
+                  height="70"
+                  class="img-fluid rounded"
+                  alt="Event Image"
+                />
+                <div class="ms-3">
+                  <span class="d-block event-title">
+                    SAICA Limpopo District: Ethics for Trainees session
+                  </span>
+                  <span class="event-timestamp">4 min read</span>
+                </div>
+              </div>
+              <div class="event d-flex align-items-center ps-4 pb-3">
+                <img
+                  src="./assets/img/event3.svg"
+                  width="90"
+                  height="70"
+                  class="img-fluid rounded"
+                  alt="Event Image"
+                />
+                <div class="ms-3">
+                  <span class="d-block event-title">
+                    SAICA Limpopo District: Ethics for Trainees session
+                  </span>
+                  <span class="event-timestamp">4 min read</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-
+    <footer class="mobile-nav-bottom">
+      <div></div>
+      <ul>
+        <li>
+          <a href="dashboard.html">
+            <img src="assets/footer-icons/home-inactive.svg" alt="" />
+            <span class="d-none">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="communities.html">
+            <img src="assets/footer-icons/community-inactive.svg" alt="" />
+            <span class="d-none">Communities</span>
+          </a>
+        </li>
+        <li>
+          <a href="events.html">
+            <img src="assets/footer-icons/events-inactive.svg" alt="" />
+            <span class="d-none">Events</span>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html">
+            <img src="assets/footer-icons/courses-inactive.svg" alt="" />
+            <span class="d-none">Courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="news-article.html" class="active-mobile-nav">
+            <img src="assets/footer-icons/news-article-active.svg" alt="" />
+            <span>News</span>
+          </a>
+        </li>
+      </ul>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

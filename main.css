@@ -598,6 +598,7 @@ section {
 
 /* Image Styling */
 .rounded-image img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1225,7 +1226,13 @@ input[type="radio"] {
   }
 
   .news {
-    max-width: 400px;
+    /* max-width: 400px; */
+    overflow-x: scroll;
+  }
+
+  .rounded-image {
+    width: 50px;
+    height: 50px;
   }
 
   /* Course page media query start*/
