@@ -930,6 +930,7 @@ input[type="radio"] {
 }
 
 .course-card-header-tab-group {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -1239,6 +1240,25 @@ input[type="radio"] {
   }
 
   /* Course detail page media query start */
+
+  .course-card-header {
+    width: 100%;
+  }
+
+  .course-card-header-tab-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .course-card-header button {
+    padding: 1rem;
+  }
+
+  .course-card-header button:not(.selected-tab) {
+    border-bottom: 3px solid #0000001a;
+  }
+
   .tab-panel[data-tab-id="summary"] {
     padding: 0.5rem;
   }
