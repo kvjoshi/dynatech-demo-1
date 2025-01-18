@@ -640,7 +640,7 @@ input[type="radio"] {
 
 /* Event page style start */
 .events-wrapper {
-  padding: 4rem 0 5.5rem;
+  padding: 4rem 0 7rem;
 }
 
 .course-container {
@@ -739,7 +739,6 @@ input[type="radio"] {
   font-size: 16px;
   font-weight: 500;
   color: #121212;
-  line-height: 24px;
 }
 
 .event-duration {
@@ -829,11 +828,6 @@ input[type="radio"] {
 .event-cta button {
   border: none;
   border-left: 2px solid var(--accent);
-}
-
-.event-card-title {
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .event-card-shadow {
@@ -1155,11 +1149,7 @@ input[type="radio"] {
 }
 
 .course-section > h5 {
-  margin-top: 1rem;
-  font-size: 16px;
-  font-weight: 600;
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 0.5rem;
+  display: none;
 }
 
 .course-container {
