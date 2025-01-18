@@ -12,8 +12,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="/styles/event-detail.css" />
     <script src="user-agent-switch.js" defer></script>
     <script src="mobile-nav.js" defer></script>
   </head>
@@ -49,6 +47,23 @@
           </li>
         </ul>
       </nav>
+      <div
+        class="mobile-nav-top d-flex justify-content-between align-items-center px-4"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <img src="assets/img/jam_menu-light.svg" alt="" width="20" />
+        </button>
+        <div class="text-white">Events</div>
+        <a href="account.html">
+          <img src="assets/img/user-round.svg" alt="" width="20" />
+        </a>
+      </div>
       <!-- Mobile sidebar -->
       <div
         class="offcanvas offcanvas-start"
@@ -86,18 +101,20 @@
         </div>
       </div>
     </header>
-    <main class="container my-3 my-lg-5">
-      <div class="course-card bg-white">
-        <div class="course-card-header">
-          <div class="course-card-header-tab-group">
-            <button data-tab-id="details" class="selected-tab">Details</button>
+    <main class="container event-container p-0">
+      <div class="event-detail-card">
+        <div class="event-detail-card-header">
+          <div class="event-detail-card-header-tab-group">
+            <button data-tab-id="details" class="selected-event-detail-tab">
+              Details
+            </button>
             <button data-tab-id="session" class="">Sessions</button>
           </div>
         </div>
-        <div class="course-card-body">
+        <div class="event-detail-card-body">
           <div class="tab-content">
             <div data-tab-id="details" class="tab-panel">
-              <div class="details-card-header">
+              <div class="event-details-card-header">
                 <div
                   style="
                     width: 100%;
@@ -165,8 +182,7 @@
                   <div class="row align-items-center">
                     <div class="col-md-4">
                       <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i
-                        ><span class="contact-icon">
+                        <span class="contact-icon">
                           <img src="/assets/img/location_icon.svg" alt="" />
                         </span>
                         <p class="contact-text">
@@ -269,8 +285,14 @@
                   </div>
                   <div class="price-section">
                     <button>Book Now</button>
-                    <p>R 120</p>
-                    <p>Non Member</p>
+                    <div>
+                      <p>R 120</p>
+                      <p>Non Member</p>
+                    </div>
+                    <div>
+                      <p>R 200</p>
+                      <p>Member</p>
+                    </div>
                   </div>
                 </div>
                 <div class="session-card">
@@ -286,8 +308,14 @@
                   </div>
                   <div class="price-section">
                     <button>Book Now</button>
-                    <p>R 120</p>
-                    <p>Non Member</p>
+                    <div>
+                      <p>R 120</p>
+                      <p>Non Member</p>
+                    </div>
+                    <div>
+                      <p>R 200</p>
+                      <p>Member</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -336,7 +364,7 @@
     <script>
       // Get all the tab buttons
       const tabButtons = document.querySelectorAll(
-        ".course-card-header-tab-group button"
+        ".event-detail-card-header-tab-group button"
       );
       // Get all the tab content panels
       const tabContent = document.querySelectorAll(".tab-panel");
@@ -344,13 +372,13 @@
       // Add an event listener to each button
       tabButtons.forEach((button) => {
         button.addEventListener("click", () => {
-          // Remove the "selected-tab" class from the currently selected button
+          // Remove the "selected-event-detail-tab" class from the currently selected button
           document
-            .querySelector(".selected-tab")
-            ?.classList.remove("selected-tab");
+            .querySelector(".selected-event-detail-tab")
+            ?.classList.remove("selected-event-detail-tab");
 
-          // Add the "selected-tab" class to the clicked button
-          button.classList.add("selected-tab");
+          // Add the "selected-event-detail-tab" class to the clicked button
+          button.classList.add("selected-event-detail-tab");
 
           // Hide all the tab content panels
           tabContent.forEach((panel) => {

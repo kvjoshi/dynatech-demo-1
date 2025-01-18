@@ -9,7 +9,6 @@ function loadBrowserSpecificCSS() {
 
   // Detect mobile devices first
   if (isMobile) {
-    console.log("Mobile device detected");
     cssFile = "mobile.css";
     if (desktopNav) {
       desktopNav.classList.add("d-none");
@@ -21,6 +20,7 @@ function loadBrowserSpecificCSS() {
       mobileBottomNav.classList.remove("d-none");
     }
   } else {
+    cssFile = "main.css";
     if (mobileTopNaV) {
       mobileTopNaV.classList.add("d-none");
     }
