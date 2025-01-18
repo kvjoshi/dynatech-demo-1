@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="main.css" />
     <script src="user-agent-switch.js" defer></script>
     <script src="mobile-nav.js" defer></script>
+    <script src="mobile-filter.js"></script>
   </head>
   <body>
     <header>
@@ -110,7 +111,7 @@
     </header>
     <main class="container my-3 my-lg-5 px-4 p-md-0">
       <div class="events-wrapper row gap-4">
-        <div class="event-trigger-btn">
+        <div class="filter-trigger-btn">
           <button type="button" onclick="toggleFilter()">
             Filter
             <img src="assets/img/filter.svg" alt="" />
@@ -118,7 +119,7 @@
         </div>
 
         <div
-          class="event-filter filter-container col-md-3 col-xl-2 bg-white p-3 shadow rounded"
+          class="filter-content filter-container col-md-3 col-xl-2 bg-white p-3 shadow rounded"
         >
           <div>
             <h5 class="fs-5">Filter</h5>
@@ -399,17 +400,4 @@
       </ul>
     </footer>
   </body>
-  <script>
-    function toggleFilter() {
-      const filter = document.querySelector(".event-filter");
-      filter.className = "";
-      filter.classList.add("mobile-filter");
-    }
-
-    function closeFilter() {
-      const filter = document.querySelector(".mobile-filter");
-      filter.className = "";
-      filter.classList.add("filter-container");
-    }
-  </script>
 </html>

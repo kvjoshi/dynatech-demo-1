@@ -466,11 +466,11 @@ section {
   padding: 0;
 }
 
-.event-trigger-btn {
+.filter-trigger-btn {
   display: none;
 }
 
-.event-filter {
+.filter-content {
   max-height: max-content;
 }
 
@@ -853,7 +853,7 @@ input[type="radio"] {
   line-height: 24px;
 }
 
-.event-filter-datepicker {
+.filter-content-datepicker {
   accent-color: #273368;
   height: 16px;
   width: 16px;

@@ -269,11 +269,11 @@ section {
   padding: 0;
 }
 
-.event-trigger-btn {
+.filter-trigger-btn {
   display: none;
 }
 
-.event-filter {
+.filter-content {
   max-height: max-content;
 }
 
@@ -604,14 +604,14 @@ input[type="radio"] {
   gap: 1rem;
 }
 
-.event-trigger-btn {
+.filter-trigger-btn {
   display: block;
   padding: 0;
   display: flex;
   justify-content: flex-end;
 }
 
-.event-trigger-btn button {
+.filter-trigger-btn button {
   border: none;
   color: var(--primary);
   background-color: white;
@@ -1121,4 +1121,9 @@ footer a {
 
 .large-shadow-link button:focus {
   outline: none;
+}
+
+/* Community Detail page style start */
+.community-detail-wrapper {
+  padding: 1rem 0 7rem;
 }
