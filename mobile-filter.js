@@ -7,5 +7,5 @@ function toggleFilter() {
 function closeFilter() {
   const filter = document.querySelector(".mobile-filter");
   filter.className = "";
-  filter.classList.add("filter-container");
+  filter.classList.add("filter-content", "filter-container");
 }
