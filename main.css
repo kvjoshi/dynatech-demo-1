@@ -872,11 +872,10 @@ input[type="radio"] {
 /* Event page styling end */
 
 /* Communities page styling start */
-.communities-list {
-  padding: 0;
-}
-
-.community-list-card {
+.community-container {
+  box-shadow: 0px 1px 2px 0px #0000004d;
+  overflow: auto;
+  border-radius: 4px;
 }
 
 /* Courses page style start */
