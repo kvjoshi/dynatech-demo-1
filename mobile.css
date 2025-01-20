@@ -593,13 +593,17 @@ input[type="radio"] {
   border-radius: 7px;
 }
 
-/* Membership Card */
+/* Membership Card style start*/
 .membership-container {
   margin: 5rem 0 7rem !important;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0px 1px 2px 0px #0000004d;
-  box-shadow: 0px 1px 3px 1px #00000026;
+}
+
+.membership-container > div:first-child {
+  display: none !important;
+}
+
+.membership-container > span:nth-child(2) {
+  display: none !important;
 }
 
 .membership-card {
