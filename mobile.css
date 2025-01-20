@@ -396,6 +396,7 @@ section {
 .rounded-image {
   width: 50px;
   height: 50px;
+  position: relative;
 }
 
 /* Image Styling */
@@ -415,7 +416,7 @@ section {
   transform: translate(-50%, -50%);
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
   text-align: center;
 }
