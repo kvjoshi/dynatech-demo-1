@@ -52,3 +52,9 @@
   line-height: 21px;
   color: #7a7a7a;
 }
+
+.com-footer > span {
+  color: #a6a6a6;
+  font-size: 12px;
+  font-weight: 600;
+}
