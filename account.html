@@ -114,16 +114,16 @@
             <h6>Account Balance</h6>
             <h3>R 0.00</h3>
           </div>
-          <div>
-            <div>
+          <div class="mobile-account__tab-group">
+            <div data-tab-id="invoices" class="selected-account-tab">
               <img src="assets/img/invoice_icon.svg" width="32" alt="" />
               <span>Invoices</span>
             </div>
-            <div>
+            <div data-tab-id="credit-notes" class="selected-account-tab">
               <img src="assets/img/credit_icon.svg" width="32" alt="" />
               <span>Credit</span>
             </div>
-            <div>
+            <div data-tab-id="statement" class="selected-account-tab">
               <img src="assets/img/statement_icon.svg" width="25" alt="" />
               <span>Statement</span>
             </div>
@@ -377,6 +377,113 @@
                   </tbody>
                 </table>
               </div>
+              <div class="mobile-invoice-container">
+                <div class="accordion" id="creditNoteAccordion">
+                  <!-- Accordion Item 1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#credit-note1"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Credit Note</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="credit-note1"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#creditNoteAccordion"
+                    >
+                      <div class="accordion-body">CREDIT NOTE DETAIL</div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#credit-note2"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Credit Note</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="credit-note2"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#creditNoteAccordion"
+                    >
+                      <div class="accordion-body">CREDIT NOTE DETAIL</div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 3 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#credit-note3"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Credit Note</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="credit-note3"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#creditNoteAccordion"
+                    >
+                      <div class="accordion-body">CREDIT NOTE DETAIL</div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 4 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#credit-note4"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Credit Note</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="credit-note4"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#creditNoteAccordion"
+                    >
+                      <div class="accordion-body">CREDIT NOTE DETAIL</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div data-tab-id="statement" class="account__tab-panel d-none">
               <h4>Statement</h4>
@@ -435,6 +542,113 @@
                   </tbody>
                 </table>
               </div>
+              <div class="mobile-invoice-container">
+                <div class="accordion" id="statementAccordion">
+                  <!-- Accordion Item 1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#statement1"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Statement</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="statement1"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#statementAccordion"
+                    >
+                      <div class="accordion-body">STATEMENT DETAILS</div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#statement2"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Statement</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="statement2"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#statementAccordion"
+                    >
+                      <div class="accordion-body">STATEMENT DETAILS</div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 3 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#statement3"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Statement</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="statement3"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#statementAccordion"
+                    >
+                      <div class="accordion-body">STATEMENT DETAILS</div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 4 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#statement4"
+                      >
+                        <div class="plus-icon"></div>
+                        <div class="title-container">
+                          <span class="invoice-title">Statement</span>
+                          <span class="invoice-number">CN-2319324-F8W6X1</span>
+                        </div>
+                        <div class="arrow-icon"></div>
+                      </button>
+                    </h2>
+                    <div
+                      id="statement4"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#statementAccordion"
+                    >
+                      <div class="accordion-body">STATEMENT DETAILS</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -476,34 +690,49 @@
       </ul>
     </footer>
     <script>
-      // Get all the tab buttons
+      // Get all the tab buttons for both desktop and mobile
       const tabButtons = document.querySelectorAll(
         ".account__tab-group button"
       );
-      // Get all the tab content panels
+      const mobileTabButtons = document.querySelectorAll(
+        ".mobile-account__tab-group div"
+      );
       const tabContent = document.querySelectorAll(".account__tab-panel");
 
-      // Add an event listener to each button
-      tabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          // Remove the "selected-account-tab" class from the currently selected button
-          document
-            .querySelector(".selected-account-tab")
-            ?.classList.remove("selected-account-tab");
-          // Add the "selected-account-tab" class to the clicked button
-          button.classList.add("selected-account-tab");
-          // Hide all tab content panels
-          tabContent.forEach((panel) => {
-            panel.classList.add("d-none");
-          });
-          // Show the tab content panel corresponding to the clicked button
-          const selectedTabId = button.getAttribute("data-tab-id");
-          document
-            .querySelector(
-              `.account__tab-panel[data-tab-id="${selectedTabId}"]`
-            )
-            ?.classList.remove("d-none");
+      // Function to handle tab switching
+      const handleTabSwitch = (clickedButton) => {
+        // Remove selected class from all buttons (both mobile and desktop)
+        document
+          .querySelectorAll(".selected-account-tab")
+          .forEach((button) => button.classList.remove("selected-account-tab"));
+
+        // Add selected class to clicked button
+        clickedButton.classList.add("selected-account-tab");
+
+        // Hide all tab content panels
+        tabContent.forEach((panel) => {
+          panel.classList.add("d-none");
         });
+
+        // Show the corresponding tab content
+        const selectedTabId = clickedButton.getAttribute("data-tab-id");
+        const targetPanel = document.querySelector(
+          `.account__tab-panel[data-tab-id="${selectedTabId}"]`
+        );
+
+        if (targetPanel) {
+          targetPanel.classList.remove("d-none");
+        }
+      };
+
+      // Add click listeners to desktop buttons
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => handleTabSwitch(button));
+      });
+
+      // Add click listeners to mobile buttons
+      mobileTabButtons.forEach((button) => {
+        button.addEventListener("click", () => handleTabSwitch(button));
       });
     </script>
   </body>
