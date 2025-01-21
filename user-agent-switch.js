@@ -1,6 +1,7 @@
 function loadBrowserSpecificCSS() {
   const userAgent = navigator.userAgent.toLowerCase();
-  const isMobile = /mobile|android|iphone|ipad|ipod/i.test(userAgent);
+  console.log("useragent", userAgent);
+  const isMobile = /pwa/i.test(userAgent);
 
   let cssFile = "";
   const desktopNav = document.querySelector(".desktop-nav");
